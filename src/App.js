@@ -26,9 +26,9 @@ const style_imageWrapper = {
 }
 
 const style_imageSVG = {
-  width: "auto",
-  height: "auto",
+  // width: "auto",
+  // height: "auto",
   maxWidth: "100%",
-  maxHeight: "100%"
+  // maxHeight: "100%"
   // height: "100%"
 }
