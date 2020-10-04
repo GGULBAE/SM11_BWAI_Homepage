@@ -12,7 +12,7 @@ function App() {
       {/* {
         require("./assets/1.svg")
       } */}
-      <img style={style_imageSVG} src={require("./assets/1.svg")} alt=""></img>
+      <img style={style_imageSVG} src={require("./assets/price.svg")} alt=""></img>
     </div>
   );
 }
