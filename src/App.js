@@ -5,6 +5,7 @@ import { Router, Route, Switch } from "react-router-dom";
 
 import NavigationBar from './components/NavigationBar.js';
 import Home from './sections/Home.js';
+import Service from './components/Service.js';
 
 var hist = createBrowserHistory();
 
@@ -15,7 +16,7 @@ function App() {
       <Router history={hist}>
         <Switch>
           <Route exact path="/team" component={Temp}/>
-          <Route exact path="/service" component={Temp}/>
+          <Route exact path="/service" component={Service}/>
           <Route exact path="/price" component={Temp}/>
           <Route exact path="/demo" component={Temp}/>
           <Route exact path="/labelling" component={Temp}/>

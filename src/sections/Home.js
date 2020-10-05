@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
-
+import './Home.css';
 // var automatic_scroll;
 
 // function afterLoad(origin, destination, direction) {
@@ -24,7 +24,7 @@ import ReactFullpage from '@fullpage/react-fullpage';
 //   }, 3000)
 // }
 
-const Fullpage2 = () => (
+const Fullpage = () => (
   <ReactFullpage
     //fullpage options
     licenseKey = {'YOUR_KEY_HERE'}
@@ -38,7 +38,12 @@ const Fullpage2 = () => (
         <ReactFullpage.Wrapper>
           <div className="section">
             <div className="slide">
-              <embed style={style_Main} src={require("../assets/homepagetemp1.svg")} type="image/svg+xml"></embed>
+              <embed style={style_Main} src={require("../assets/homepage1.svg")} type="image/svg+xml"></embed>
+
+              <div style={style_Main1B} className="animate">
+                <img style={style_fillMain} src={require("../assets/main1B.svg")} alt=""></img>
+              </div>
+
             </div>
             <div className="slide">
               <embed style={style_Main} src={require("../assets/homepage2.svg")} type="image/svg+xml"></embed>
@@ -46,18 +51,6 @@ const Fullpage2 = () => (
             <div className="slide">
               <embed style={style_Main} src={require("../assets/homepage3.svg")} type="image/svg+xml"></embed>
             </div>
-            {/* <div className="slide"> */}
-            
-            {/* </div> */}
-            {/* <div className="slide">
-              <embed style={style_Main} src={require("../assets/1.svg")} type="image/svg+xml"></embed>
-            </div>
-            <div className="slide">
-              <embed style={style_Main} src={require("../assets/2.svg")} type="image/svg+xml"></embed>
-            </div>
-            <div className="slide">
-              <embed style={style_Main} src={require("../assets/3.svg")} type="image/svg+xml"></embed>
-            </div> */}
           </div>
         </ReactFullpage.Wrapper>
       );
@@ -65,40 +58,23 @@ const Fullpage2 = () => (
   />
 );
 
-// function Fullpage() {
-//   return <div style={style_Main_ImageWrapper}>
-//     <embed style={style_Main} src={require("../assets/homepagetemp1.svg")} type="image/svg+xml"></embed>
-//   </div>
-// }
-
 export default function Home(props) {
     return <React.Fragment>
-        <Fullpage2/>
+        <Fullpage/>
     </React.Fragment>
 }
 
-// const style_Main_Section = {
-//   // textAlign: "center",
-//   // backgroundColor: "#010102"
-// }
-
-// const style_Main_ImageWrapper = {
-//   width: "100%",
-//   height: "100%",
-//   position: "relative",
-//   overflow: "hidden"
-// }
-
 const style_Main = {
-  // position: "absolute",
   width: "100%"
-  // // top: "60%",
-  // left: "50%",
-  // transform: "translate(-50%, 0%)",
-  // // transform: "translate(-50%, -50%)",
-  // width: "100vw",
-  
-  // height: "100vh"
-  // height: "100%",
+}
+
+const style_Main1B = {
+  position: "absolute",
+  top: "50%",
+  left: "calc(33.3333% / 2)",
+  transform: "translate(-50%, -50%)"
+}
+
+const style_fillMain = {
 
 }
