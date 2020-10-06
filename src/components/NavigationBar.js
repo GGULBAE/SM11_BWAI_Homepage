@@ -13,8 +13,10 @@ function linkTo(e) {
 export default function NavigationBar(props) {
   const Btns = ['home', 'team', 'service', 'price', 'demo', 'labelling'];
   const location_current = window.location.pathname.toLowerCase();
-  const highlight = location_current.replace("/", "");
+  const location_noSlash = location_current.replace("/", "");
+  const highlight = location_noSlash ? location_noSlash : Btns[0];
 
+  console.log(highlight);
   return (
     <div style={style_NavigationWrapper}>
       <div style={style_NavigationLogo}>
@@ -28,7 +30,6 @@ export default function NavigationBar(props) {
       <div style={style_NavigationDashBoard} linkto={bwai_dashboard} onClick={linkTo}>
         DASHBOARD
       </div>
-
     </div>
   )
 }
@@ -75,7 +76,6 @@ const style_NavigationBtnHighlight = {
 }
 
 const style_NavigationDashBoard = {
-  // display: "inline-block",
   position: "absolute",
   top: "0px",
   right: "48px",
