@@ -33,18 +33,5 @@ function App() {
 export default App;
 
 function Temp() {
-  return <p>kk</p>
+  return <p>Not Prepared!</p>
 }
-// const style_imageWrapper = {
-//   width: "100vw",
-//   height: "100vh",
-//   textAlign: "center"
-// }
-
-// const style_imageSVG = {
-//   // width: "auto",
-//   // height: "auto",
-//   maxWidth: "100%",
-//   // maxHeight: "100%"
-//   // height: "100%"
-// }
