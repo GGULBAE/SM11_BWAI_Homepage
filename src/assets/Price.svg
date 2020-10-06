@@ -1,0 +1,152 @@
+<svg id="그룹_22" data-name="그룹 22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1367" viewBox="0 0 1920 1367">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f4f4f8;
+      }
+
+      .cls-12, .cls-13, .cls-15, .cls-16, .cls-2 {
+        fill: #502eff;
+      }
+
+      .cls-15, .cls-16, .cls-2 {
+        stroke: rgba(0,0,0,0);
+      }
+
+      .cls-2 {
+        font-size: 48px;
+      }
+
+      .cls-14, .cls-16, .cls-2, .cls-4, .cls-8 {
+        font-family: Helvetica;
+      }
+
+      .cls-15, .cls-3, .cls-7 {
+        font-family: AppleSDGothicNeo-Regular, Apple SD Gothic Neo;
+      }
+
+      .cls-12, .cls-5 {
+        font-size: 40px;
+      }
+
+      .cls-12, .cls-5, .cls-9 {
+        font-family: Helvetica-Bold, Helvetica;
+      }
+
+      .cls-11, .cls-12, .cls-5 {
+        font-weight: 700;
+      }
+
+      .cls-6 {
+        font-family: AppleSDGothicNeo-Bold, Apple SD Gothic Neo;
+      }
+
+      .cls-7 {
+        font-size: 32px;
+      }
+
+      .cls-7, .cls-8 {
+        font-weight: 400;
+      }
+
+      .cls-14, .cls-15, .cls-16, .cls-8 {
+        font-size: 28px;
+      }
+
+      .cls-10, .cls-11 {
+        fill: #fff;
+      }
+
+      .cls-10 {
+        stroke: #502eff;
+      }
+
+      .cls-11 {
+        font-size: 16px;
+        font-family: Montserrat-Bold, Montserrat;
+        letter-spacing: 0.1em;
+      }
+
+      .cls-13 {
+        fill-rule: evenodd;
+      }
+
+      .cls-17 {
+        stroke: none;
+      }
+
+      .cls-18 {
+        fill: none;
+      }
+
+      .cls-19 {
+        filter: url(#사각형_41);
+      }
+
+      .cls-20 {
+        filter: url(#사각형_40);
+      }
+    </style>
+    <filter id="사각형_40" x="395" y="533" width="555" height="470" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#502eff" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="사각형_41" x="990" y="533" width="555" height="470" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-2"/>
+      <feFlood flood-color="#502eff" flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <rect id="사각형_42" data-name="사각형 42" class="cls-1" width="1920" height="931" transform="translate(0 436)"/>
+  <rect id="사각형_34" data-name="사각형 34" width="1920" height="158"/>
+  <rect id="사각형_39" data-name="사각형 39" class="cls-1" width="1920" height="280" transform="translate(0 158)"/>
+  <text id="BWAI_API는_유연한_서비스_이용을_위해_실용적인_구성과_요금제를_제공합니다." data-name="BWAI API는 유연한 서비스 이용을 위해 
+실용적인 구성과 요금제를 제공합니다." class="cls-2" transform="translate(960 277)"><tspan x="-386.956" y="0">BWAI API</tspan><tspan class="cls-3" y="0">는</tspan><tspan y="0"> </tspan><tspan class="cls-3" y="0">유연한</tspan><tspan y="0"> </tspan><tspan class="cls-3" y="0">서비스</tspan><tspan y="0"> </tspan><tspan class="cls-3" y="0">이용을</tspan><tspan y="0"> </tspan><tspan class="cls-3" y="0">위해</tspan><tspan y="0"> </tspan><tspan class="cls-3"><tspan x="-358.832" y="72">실용적인</tspan><tspan class="cls-4" y="72"> </tspan><tspan y="72">구성과</tspan><tspan class="cls-4" y="72"> </tspan><tspan y="72">요금제를</tspan><tspan class="cls-4" y="72"> </tspan><tspan y="72">제공합니다</tspan><tspan class="cls-4" y="72">.</tspan></tspan></text>
+  <text id="Masking_기능과_Ratio_기능은_별도로_계산이_됩니다._예_Masking_500건_Ratio_500건_이용시_이용요금_부과_x_정해진_범위_안에_있는_요청_개수는_해당_범위안의_요금으로_계산됩니다._예_Masking_기능_1500건_이용시_0_1000건_무료_1000_1500건_x_2원_계산_1000원" data-name="Masking 기능과 Ratio 기능은 별도로 계산이 됩니다.
+예) Masking 500건, Ratio 500건 이용시 이용요금 부과 x
+
+정해진 범위 안에 있는 요청 개수는 해당 범위안의 요금으로 계산됩니다.
+예) Masking 기능 1500건 이용시, 0~1000건 무료, 1000~1500건 x 2원 계산 = 1000원" class="cls-5" transform="translate(960 1110)"><tspan x="-428.416" y="0">Masking </tspan><tspan class="cls-6" y="0">기능과</tspan><tspan y="0" xml:space="preserve"> Ratio </tspan><tspan class="cls-6" y="0">기능은</tspan><tspan y="0"> </tspan><tspan class="cls-6" y="0">별도로</tspan><tspan y="0"> </tspan><tspan class="cls-6" y="0">계산이</tspan><tspan y="0"> </tspan><tspan class="cls-6" y="0">됩니다</tspan><tspan y="0">.</tspan><tspan class="cls-7"><tspan x="-369.736" y="40">예</tspan><tspan class="cls-4" y="40">) Masking 500</tspan><tspan y="40">건</tspan><tspan class="cls-4" y="40">, Ratio 500</tspan><tspan y="40">건</tspan><tspan class="cls-4" y="40"> </tspan><tspan y="40">이용시</tspan><tspan class="cls-4" y="40"> </tspan><tspan y="40">이용요금</tspan><tspan class="cls-4" y="40"> </tspan><tspan y="40">부과</tspan><tspan class="cls-4" y="40" xml:space="preserve"> x</tspan></tspan><tspan class="cls-8"><tspan x="0" y="80"></tspan></tspan><tspan class="cls-6"><tspan x="-557.266" y="120">정해진</tspan><tspan class="cls-9" y="120"> </tspan><tspan y="120">범위</tspan><tspan class="cls-9" y="120"> </tspan><tspan y="120">안에</tspan><tspan class="cls-9" y="120"> </tspan><tspan y="120">있는</tspan><tspan class="cls-9" y="120"> </tspan><tspan y="120">요청</tspan><tspan class="cls-9" y="120"> </tspan><tspan y="120">개수는</tspan><tspan class="cls-9" y="120"> </tspan><tspan y="120">해당</tspan><tspan class="cls-9" y="120"> </tspan><tspan y="120">범위안의</tspan><tspan class="cls-9" y="120"> </tspan><tspan y="120">요금으로</tspan><tspan class="cls-9" y="120"> </tspan><tspan y="120">계산됩니다</tspan><tspan class="cls-9" y="120">.</tspan></tspan><tspan class="cls-7"><tspan x="-566.538" y="160">예</tspan><tspan class="cls-4" y="160">) Masking </tspan><tspan y="160">기능</tspan><tspan class="cls-4" y="160" xml:space="preserve"> 1500</tspan><tspan y="160">건</tspan><tspan class="cls-4" y="160"> </tspan><tspan y="160">이용시</tspan><tspan class="cls-4" y="160">, 0~1000</tspan><tspan y="160">건</tspan><tspan class="cls-4" y="160"> </tspan><tspan y="160">무료</tspan><tspan class="cls-4" y="160">, 1000~1500</tspan><tspan y="160">건</tspan><tspan class="cls-4" y="160" xml:space="preserve"> x 2</tspan><tspan y="160">원</tspan><tspan class="cls-4" y="160"> </tspan><tspan y="160">계산</tspan><tspan class="cls-4" y="160" xml:space="preserve"> = 1000</tspan><tspan y="160">원</tspan></tspan></text>
+  <g class="cls-20" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <g id="사각형_40-2" data-name="사각형 40" class="cls-10" transform="translate(400 538)">
+      <rect class="cls-17" width="525" height="440"/>
+      <rect class="cls-18" x="0.5" y="0.5" width="524" height="439"/>
+    </g>
+  </g>
+  <text id="SAVE" class="cls-11" transform="translate(589 901)"><tspan x="0" y="0">SAVE</tspan></text>
+  <text id="Masking" class="cls-12" transform="translate(589 620)"><tspan x="0" y="0">Masking</tspan></text>
+  <path id="Chevron_down" data-name="Chevron down" class="cls-13" d="M15.167,2.873,9.174,8.864a1.662,1.662,0,0,1-1.353.466,1.667,1.667,0,0,1-1.354-.466L.476,2.873a1.7,1.7,0,1,1,2.4-2.4L7.822,5.424,12.769.475a1.7,1.7,0,0,1,2.4,2.4Z" transform="translate(450.019 716.02)"/>
+  <text id="API_요청" data-name="API 요청" class="cls-14" transform="translate(489.681 732)"><tspan x="0" y="0">API </tspan><tspan class="cls-3" y="0">요청</tspan></text>
+  <path id="Chevron_down-2" data-name="Chevron down" class="cls-13" d="M15.167,2.873,9.174,8.864a1.662,1.662,0,0,1-1.353.466,1.667,1.667,0,0,1-1.354-.466L.476,2.873a1.7,1.7,0,1,1,2.4-2.4L7.822,5.424,12.769.475a1.7,1.7,0,0,1,2.4,2.4Z" transform="translate(450.019 769.02)"/>
+  <text id="_0건이상_1000건_미만" data-name="0건이상 ~ 1000건 미만" class="cls-14" transform="translate(489.681 785)"><tspan x="0" y="0">0</tspan><tspan class="cls-3" y="0">건이상</tspan><tspan y="0" xml:space="preserve"> ~ 1000</tspan><tspan class="cls-3" y="0">건</tspan><tspan y="0"> </tspan><tspan class="cls-3" y="0">미만</tspan></text>
+  <path id="Chevron_down-3" data-name="Chevron down" class="cls-13" d="M15.167,2.873,9.174,8.864a1.662,1.662,0,0,1-1.353.466,1.667,1.667,0,0,1-1.354-.466L.476,2.873a1.7,1.7,0,1,1,2.4-2.4L7.822,5.424,12.769.475a1.7,1.7,0,0,1,2.4,2.4Z" transform="translate(450.019 822.02)"/>
+  <text id="_1000건_이상_10만건_미만" data-name="1000건 이상 ~ 10만건 미만" class="cls-14" transform="translate(489.681 838)"><tspan x="0" y="0">1000</tspan><tspan class="cls-3" y="0">건</tspan><tspan y="0"> </tspan><tspan class="cls-3" y="0">이상</tspan><tspan y="0" xml:space="preserve"> ~ 10</tspan><tspan class="cls-3" y="0">만건</tspan><tspan y="0"> </tspan><tspan class="cls-3" y="0">미만</tspan></text>
+  <path id="Chevron_down-4" data-name="Chevron down" class="cls-13" d="M15.167,2.873,9.174,8.864a1.662,1.662,0,0,1-1.353.466,1.667,1.667,0,0,1-1.354-.466L.476,2.873a1.7,1.7,0,1,1,2.4-2.4L7.822,5.424,12.769.475a1.7,1.7,0,0,1,2.4,2.4Z" transform="translate(450.019 875.02)"/>
+  <text id="_10만건_이상_" data-name="10만건 이상 ~" class="cls-14" transform="translate(489.681 891)"><tspan x="0" y="0">10</tspan><tspan class="cls-3" y="0">만건</tspan><tspan y="0"> </tspan><tspan class="cls-3" y="0">이상</tspan><tspan y="0" xml:space="preserve"> ~</tspan></text>
+  <text id="무료" class="cls-15" transform="translate(824 785)"><tspan x="0" y="0">무료</tspan></text>
+  <text id="_2원" data-name="2원" class="cls-16" transform="translate(828 838)"><tspan x="0" y="0">2</tspan><tspan class="cls-3" y="0">원</tspan></text>
+  <text id="_1원" data-name="1원" class="cls-16" transform="translate(828 891)"><tspan x="0" y="0">1</tspan><tspan class="cls-3" y="0">원</tspan></text>
+  <g class="cls-19" transform="matrix(1, 0, 0, 1, 0, 0)">
+    <g id="사각형_41-2" data-name="사각형 41" class="cls-10" transform="translate(995 538)">
+      <rect class="cls-17" width="525" height="440"/>
+      <rect class="cls-18" x="0.5" y="0.5" width="524" height="439"/>
+    </g>
+  </g>
+  <text id="Ratio" class="cls-12" transform="translate(1214 620)"><tspan x="0" y="0">Ratio</tspan></text>
+  <path id="Chevron_down-5" data-name="Chevron down" class="cls-13" d="M15.167,2.873,9.174,8.864a1.662,1.662,0,0,1-1.353.466,1.667,1.667,0,0,1-1.354-.466L.476,2.873a1.7,1.7,0,1,1,2.4-2.4L7.822,5.424,12.769.475a1.7,1.7,0,0,1,2.4,2.4Z" transform="translate(1045.019 716.02)"/>
+  <path id="Chevron_down-6" data-name="Chevron down" class="cls-13" d="M15.167,2.873,9.174,8.864a1.662,1.662,0,0,1-1.353.466,1.667,1.667,0,0,1-1.354-.466L.476,2.873a1.7,1.7,0,1,1,2.4-2.4L7.822,5.424,12.769.475a1.7,1.7,0,0,1,2.4,2.4Z" transform="translate(1045.019 769.02)"/>
+  <path id="Chevron_down-7" data-name="Chevron down" class="cls-13" d="M15.167,2.873,9.174,8.864a1.662,1.662,0,0,1-1.353.466,1.667,1.667,0,0,1-1.354-.466L.476,2.873a1.7,1.7,0,1,1,2.4-2.4L7.822,5.424,12.769.475a1.7,1.7,0,0,1,2.4,2.4Z" transform="translate(1045.019 822.02)"/>
+  <path id="Chevron_down-8" data-name="Chevron down" class="cls-13" d="M15.167,2.873,9.174,8.864a1.662,1.662,0,0,1-1.353.466,1.667,1.667,0,0,1-1.354-.466L.476,2.873a1.7,1.7,0,1,1,2.4-2.4L7.822,5.424,12.769.475a1.7,1.7,0,0,1,2.4,2.4Z" transform="translate(1045.019 875.02)"/>
+  <text id="API_요청-2" data-name="API 요청" class="cls-14" transform="translate(1085 732)"><tspan x="0" y="0">API </tspan><tspan class="cls-3" y="0">요청</tspan></text>
+  <text id="_0건이상_1000건_미만-2" data-name="0건이상 ~ 1000건 미만" class="cls-14" transform="translate(1085 785)"><tspan x="0" y="0">0</tspan><tspan class="cls-3" y="0">건이상</tspan><tspan y="0" xml:space="preserve"> ~ 1000</tspan><tspan class="cls-3" y="0">건</tspan><tspan y="0"> </tspan><tspan class="cls-3" y="0">미만</tspan></text>
+  <text id="_1000건이상_10만건_미만" data-name="1000건이상 ~ 10만건 미만" class="cls-14" transform="translate(1085 838)"><tspan x="0" y="0">1000</tspan><tspan class="cls-3" y="0">건이상</tspan><tspan y="0" xml:space="preserve"> ~ 10</tspan><tspan class="cls-3" y="0">만건</tspan><tspan y="0"> </tspan><tspan class="cls-3" y="0">미만</tspan></text>
+  <text id="_10만건이상_" data-name="10만건이상 ~" class="cls-14" transform="translate(1085 891)"><tspan x="0" y="0">10</tspan><tspan class="cls-3" y="0">만건이상</tspan><tspan y="0" xml:space="preserve"> ~</tspan></text>
+  <text id="무료-2" data-name="무료" class="cls-15" transform="translate(1419.319 785)"><tspan x="0" y="0">무료</tspan></text>
+  <text id="_3원" data-name="3원" class="cls-16" transform="translate(1423.319 838)"><tspan x="0" y="0">3</tspan><tspan class="cls-3" y="0">원</tspan></text>
+  <text id="_2원-2" data-name="2원" class="cls-16" transform="translate(1423.319 891)"><tspan x="0" y="0">2</tspan><tspan class="cls-3" y="0">원</tspan></text>
+</svg>
