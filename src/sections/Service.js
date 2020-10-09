@@ -1,9 +1,14 @@
 import React from 'react';
 
 export default function Service(props) {
-    // return <img style={serviceWrapper} src={require("../assets/Service.svg")} alt=""></img>
-    // return <embed style={serviceWrapper} src={require("../assets/service2.svg")} type="image/svg+xml"></embed>
-    return <p>service</p>
+    return <React.Fragment>
+        <div style={style_Navigation_Shadow}></div>
+        <embed style={serviceWrapper} src={require("../assets/Service.svg")} type="image/svg+xml"></embed>
+    </React.Fragment>
+}
+
+const style_Navigation_Shadow = {
+    height: "96px"
 }
 
 const serviceWrapper = {
