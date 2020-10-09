@@ -40,7 +40,8 @@ function NavigationBtn({text, highlight}) {
   </div>
 }
 
-const absolute_top_value = (136 - 34) / 2 + "px";
+// const absolute_top_value = (136 - 34) / 2 + "px";
+const absolute_top_value = "30px";
 const left_right_value = 120 + "px";
 
 const style_NavigationWrapper = {
@@ -48,12 +49,12 @@ const style_NavigationWrapper = {
   fontFamily: "NotoSansKR-Bold",
   zIndex: "100",
   color: "#707070",
-  fontSize: "24px",
+  fontSize: "20px",
   letterSpacing: "30",
   lineHeight: "34px",
   width: "100vw",
   backgroundColor: "#000",
-  height: "136px"
+  height: "96px"
 }
 
 const style_NavigationWrapper_main = {
@@ -75,7 +76,7 @@ const style_NavigationBtns = {
 
 const style_NavigationBtn = {
   display: "inline-block",
-  margin: "0px 23px 0 23px",
+  margin: "0px 30px 0 30px",
   marginTop: absolute_top_value,
   cursor: "pointer"
 }
