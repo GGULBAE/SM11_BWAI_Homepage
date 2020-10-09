@@ -18,6 +18,12 @@ export default function test() {
             <embed style={ss} src={b} alt="" type="image/svg+xml"></embed>
             <embed style={ss} src={c} alt="" type="image/svg+xml"></embed>
             <embed style={ss} src={d} alt="" type="image/svg+xml"></embed>
+
+            <p>object</p>
+            <object data={a} type="image/svg+xml" aria-label="킹 (체스 말)"></object>
+            <object data={b} type="image/svg+xml" aria-label="킹 (체스 말)"></object>
+            <object data={c} type="image/svg+xml" aria-label="킹 (체스 말)"></object>
+            <object data={d} type="image/svg+xml" aria-label="킹 (체스 말)"></object>
         </div>
     </>
 }
