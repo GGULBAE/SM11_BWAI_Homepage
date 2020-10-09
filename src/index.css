@@ -2,22 +2,22 @@
 
 @font-face {
   font-family: 'NanumSquareOTFR';
-  src: url('./fonts/nanumsquare/NanumSquareR.ttf') format('truetype');
+  src: url('./fonts/nanumsquare/NanumSquareR.ttf') format('truetype'), url('./fonts/nanumsquare/NanumSquare_acR.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'NanumSquareOTFL';
-  src: url('./fonts/nanumsquare/NanumSquareL.ttf') format('truetype');
+  src: url('./fonts/nanumsquare/NanumSquareL.ttf') format('truetype'), url('./fonts/nanumsquare/NanumSquare_acL.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'NanumSquareOTFB';
-  src: url('./fonts/nanumsquare/NanumSquareB.ttf') format('truetype');
+  src: url('./fonts/nanumsquare/NanumSquareB.ttf') format('truetype'), url('./fonts/nanumsquare/NanumSquare_acB.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'NanumSquareOTFEB';
-  src: url('./fonts/nanumsquare/NanumSquareEB.ttf') format('truetype');
+  src: url('./fonts/nanumsquare/NanumSquareEB.ttf') format('truetype'), url('./fonts/nanumsquare/NanumSquare_acEB.ttf') format('truetype');
 }
 
 
