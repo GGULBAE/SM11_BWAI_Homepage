@@ -92,19 +92,19 @@ function POSTWrapper({ data }) {
 class POST extends React.Component {
     constructor(props) {
         super(props);
-        this.colorDefalutValue = props.postData.label ? "#FF0000" : "#00FF00";
+        this.colorDefalutValue = props.postData.label ? "#FEBA8F" : "#B2CCFA";
         this.state = {
             color: this.colorDefalutValue,
         }
         this.postRef = React.createRef();
     }
-
+    // #C3F8FC
     toggleColor = () => {
         var color = this.state.color;
         var newColor;
-        if (color === "#FF0000") newColor = "#00FF00";
-        else if (color === "#00FF00") newColor = "#FBB117";
-        else newColor = "#FF0000";
+        if (color === "#FEBA8F") newColor = "#B2CCFA";
+        else if (color === "#B2CCFA") newColor = "#C3F8FC";
+        else newColor = "#FEBA8F";
 
         this.setState({
             color: newColor
@@ -119,9 +119,9 @@ class POST extends React.Component {
     getLabel = () => {
         var color = this.state.color;
 
-        if (color === "#FF0000")
+        if (color === "#FEBA8F")
             return 1;
-        else if (color === "#00FF00")
+        else if (color === "#B2CCFA")
             return 0;
         else
             return -1;
