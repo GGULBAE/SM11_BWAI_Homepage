@@ -1,0 +1,44 @@
+<svg id="그룹_80" data-name="그룹 80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1524" viewBox="0 0 1920 1524">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 1200 800">
+      <image width="1200" height="800" xlink:href="Service1-image.png"/>
+    </pattern>
+    <pattern id="pattern-2" width="1" height="1" viewBox="20.657 41.99 305.261 431.011">
+      <image preserveAspectRatio="xMidYMid slice" width="378.147" height="473" xlink:href="Service1-image2.png"/>
+    </pattern>
+    <pattern id="pattern-3" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 551 709">
+      <image width="551" height="709" xlink:href="Service1-image3.jpg"/>
+    </pattern>
+    <pattern id="pattern-4" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" viewBox="0 0 1280 1268">
+      <image width="1280" height="1268" xlink:href="Service1-image4.png"/>
+    </pattern>
+  </defs>
+  <path id="교차_5" data-name="교차 5" d="M-2000-504V-784H-80v280Z" transform="translate(2000 942)" fill="url(#pattern)"/>
+  <rect id="사각형_60" data-name="사각형 60" width="1920" height="280" transform="translate(0 158)" opacity="0.7"/>
+  <rect id="사각형_34" data-name="사각형 34" width="1920" height="158"/>
+  <text id="SWMAESTRO_11기_BWAI_비속어를_해결하기_위한_기술과_경험을_가지고_있습니다._" data-name="SWMAESTRO 11기 BWAI
+비속어를 해결하기 위한 기술과 경험을 가지고 있습니다. " transform="translate(960 277)" fill="#fff" font-size="48" font-family="Helvetica-Light, Helvetica" font-weight="300"><tspan x="-269.28" y="0">SWMAESTRO 11</tspan><tspan y="0" font-family="AppleSDGothicNeo-Light, Apple SD Gothic Neo">기</tspan><tspan y="0" xml:space="preserve"> BWAI</tspan><tspan font-family="AppleSDGothicNeo-Light, Apple SD Gothic Neo"><tspan x="-530.856" y="72">비속어를</tspan><tspan y="72" font-family="Helvetica-Light, Helvetica"> </tspan><tspan y="72">해결하기</tspan><tspan y="72" font-family="Helvetica-Light, Helvetica"> </tspan><tspan y="72">위한</tspan><tspan y="72" font-family="Helvetica-Light, Helvetica"> </tspan><tspan y="72">기술과</tspan><tspan y="72" font-family="Helvetica-Light, Helvetica"> </tspan><tspan y="72">경험을</tspan><tspan y="72" font-family="Helvetica-Light, Helvetica"> </tspan><tspan y="72">가지고</tspan><tspan y="72" font-family="Helvetica-Light, Helvetica"> </tspan><tspan y="72">있습니다</tspan><tspan y="72" font-family="Helvetica-Light, Helvetica">. </tspan></tspan></text>
+  <path id="교차_2" data-name="교차 2" d="M-1963-2108.912v-473h335v473Z" transform="translate(2363 3120)" fill="url(#pattern-2)"/>
+  <text id="이현배" transform="translate(568 1055)" font-size="24" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-weight="700"><tspan x="-31.14" y="0">이현배</tspan></text>
+  <text id="Front-end_Developer_세종대학교" data-name="Front-end Developer
+세종대학교" transform="translate(568 1095.689)" fill="#502eff" font-size="24" font-family="Helvetica"><tspan x="-110.057" y="0">Front-end Developer</tspan><tspan fill="#bebebe" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo"><tspan x="-51.9" y="36">세종대학교</tspan></tspan></text>
+  <path id="교차_4" data-name="교차 4" d="M-1976.462-2130v-473h335v473Z" transform="translate(2769.463 3141)" fill="url(#pattern-3)"/>
+  <text id="한석현" transform="translate(927 1055)" font-size="24" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-weight="700"><tspan x="0" y="0">한석현</tspan></text>
+  <text id="AI_Machine-learning_developer_원광대학교" data-name="AI , Machine-learning developer 
+원광대학교" transform="translate(960 1096)" fill="#502eff" font-size="24" font-family="Helvetica"><tspan x="-172.764" y="0">AI , Machine-learning developer</tspan><tspan y="0" fill="#bebebe"> </tspan><tspan fill="#bebebe" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo"><tspan x="-51.9" y="36">원광대학교</tspan></tspan></text>
+  <path id="교차_3" data-name="교차 3" d="M-1902.129-2135v-473H-1568v473Z" transform="translate(3088.129 3146)" fill="url(#pattern-4)"/>
+  <text id="서정민" transform="translate(1352.871 1055)" font-size="24" font-family="AppleSDGothicNeo-Bold, Apple SD Gothic Neo" font-weight="700"><tspan x="-31.14" y="0">서정민</tspan></text>
+  <text id="Back-end_Developer_세종대학교" data-name="Back-end Developer
+세종대학교" transform="translate(1352.871 1096)" fill="#502eff" font-size="24" font-family="Helvetica"><tspan x="-108.727" y="0">Back-end Developer</tspan><tspan fill="#bebebe" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo"><tspan x="-51.9" y="36">세종대학교</tspan></tspan></text>
+  <rect id="사각형_59" data-name="사각형 59" width="1920" height="286" transform="translate(0 1238)" fill="#222d39"/>
+  <text id="BWAI는_SWMestro에서_진행된_프로젝트입니다._copyright_2020_All_rights_reserved_by_BWAI" data-name="BWAI는 SWMestro에서 진행된 프로젝트입니다.
+copyright 2020 All rights reserved by BWAI" transform="translate(960 1382)" fill="#fff" font-size="24" font-family="Helvetica"><tspan x="-249.169" y="0">BWAI</tspan><tspan y="0" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo">는</tspan><tspan y="0" xml:space="preserve"> SWMESTRO</tspan><tspan y="0" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo">에서</tspan><tspan y="0"> </tspan><tspan y="0" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo">진행된</tspan><tspan y="0"> </tspan><tspan y="0" font-family="AppleSDGothicNeo-Regular, Apple SD Gothic Neo">프로젝트입니다</tspan><tspan y="0">.</tspan><tspan x="-295.248" y="36">COPYRIGHT 2020 ALL RIGHTS RESERVED BY BWAI</tspan></text>
+  <g id="그룹_41" data-name="그룹 41" transform="translate(0 -183)">
+    <text id="LABELLING" transform="translate(1267 1490)" fill="#fff" font-size="24" font-family="Helvetica" opacity="0.5"><tspan x="-65.367" y="0">LABELLING</tspan></text>
+    <text id="DEMO" transform="translate(1124 1490)" fill="#fff" font-size="24" font-family="Helvetica" opacity="0.5"><tspan x="-36" y="0">DEMO</tspan></text>
+    <text id="PRICE" transform="translate(1005 1490)" fill="#fff" font-size="24" font-family="Helvetica" opacity="0.5"><tspan x="-36.674" y="0">PRICE</tspan></text>
+    <text id="SERVICE" transform="translate(873 1490)" fill="#fff" font-size="24" font-family="Helvetica" opacity="0.5"><tspan x="-52.471" y="0">SERVICE</tspan></text>
+    <text id="TEAM" transform="translate(744 1490)" fill="#fff" font-size="24" font-family="Helvetica" opacity="0.5"><tspan x="-33.334" y="0">TEAM</tspan></text>
+    <text id="HOME" transform="translate(627 1490)" fill="#fff" font-size="24" font-family="Helvetica" opacity="0.5"><tspan x="-36" y="0">HOME</tspan></text>
+  </g>
+</svg>
