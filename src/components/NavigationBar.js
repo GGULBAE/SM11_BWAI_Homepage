@@ -40,9 +40,8 @@ function NavigationBtn({text, highlight}) {
   </div>
 }
 
-// const absolute_top_value = (59 / 2) + "px";
-
 const absolute_top_value = (136 - 34) / 2 + "px";
+const left_right_value = 120 + "px";
 
 const style_NavigationWrapper = {
   position: "absolute",
@@ -65,9 +64,8 @@ const style_NavigationWrapper_main = {
 
 const style_NavigationLogo = {
   position: "absolute",
-  top: "50%",
-  transform: "translate(0, -50%)",
-  left: "48px",
+  top: absolute_top_value,
+  left: left_right_value,
   cursor: "pointer"
 }
 
@@ -90,6 +88,6 @@ const style_NavigationBtnHighlight = {
 const style_NavigationDashBoard = {
   position: "absolute",
   top: absolute_top_value,
-  right: "48px",
+  right: left_right_value,
   cursor: "pointer"
 }
