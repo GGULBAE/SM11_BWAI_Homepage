@@ -1,6 +1,6 @@
 /* @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); */
 
-@font-face {
+/* @font-face {
   font-family: 'NanumSquareOTFR';
   src: url('./fonts/nanumsquare/NanumSquareR.ttf') format('truetype'), url('./fonts/nanumsquare/NanumSquare_acR.ttf') format('truetype');
 }
@@ -18,6 +18,24 @@
 @font-face {
   font-family: 'NanumSquareOTFEB';
   src: url('./fonts/nanumsquare/NanumSquareEB.ttf') format('truetype'), url('./fonts/nanumsquare/NanumSquare_acEB.ttf') format('truetype');
+} */
+
+
+@font-face {
+  font-family: 'NanumSquareOTFR';
+  src: url('./fonts/nanumsquare/NanumSquareOTF_acR.otf') format('opentype');
+}
+@font-face {
+  font-family: 'NanumSquareOTFL';
+  src: url('./fonts/nanumsquare/NanumSquareOTF_acL.otf') format('opentype');
+}
+@font-face {
+  font-family: 'NanumSquareOTFB';
+  src: url('./fonts/nanumsquare/NanumSquareOTF_acB.otf') format('opentype');
+}
+@font-face {
+  font-family: 'NanumSquareOTFEB';
+  src: url('./fonts/nanumsquare/NanumSquareOTF_acEB.otf') format('opentype');
 }
 
 
