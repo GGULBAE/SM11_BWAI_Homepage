@@ -51,6 +51,7 @@
 
       .cls-7 {
         font-size: 40px;
+        font-weight: 700;
       }
 
       .cls-8 {
@@ -59,6 +60,7 @@
 
       .cls-10 {
         font-family: NanumSquareOTFEB, NanumSquareOTF;
+        font-weight: 800;
       }
 
       .cls-11 {
@@ -102,6 +104,10 @@
       .cls-20 {
         filter: url(#사각형_40);
       }
+      
+      .cls-50 {
+        font-weight: 700;
+      }
     </style>
     <filter id="사각형_40" x="395" y="1179" width="555" height="361" filterUnits="userSpaceOnUse">
       <feOffset dx="10" dy="10" input="SourceAlpha"/>
@@ -127,7 +133,16 @@
 예) Masking 500건, Ratio 500건 이용시 이용요금 부과 x
 
 정해진 범위 안에 있는 요청 개수는 해당 범위안의 요금으로 계산됩니다.
-예) Masking 기능 1500건 이용시, 0~1000건 무료, 1000~1500건 x 2원 계산 = 1000원" class="cls-3" transform="translate(960 1728)"><tspan x="-305.088" y="0">Masking 기능과 Ratio 기능은 별도로 계산이 됩니다.</tspan><tspan class="cls-4"><tspan x="-272.86" y="28">예) Masking 500건, Ratio 500건 이용시 이용요금 부과 x</tspan></tspan><tspan class="cls-5"><tspan x="0" y="56"></tspan></tspan><tspan x="-405.076" y="84">정해진 범위 안에 있는 요청 개수는 해당 범위안의 요금으로 계산됩니다.</tspan><tspan class="cls-4"><tspan x="-422.613" y="112">예) Masking 기능 1500건 이용시, 0~1000건 무료, 1000~1500건 x 2원 계산 = 1000원</tspan></tspan></text>
+예) Masking 기능 1500건 이용시, 0~1000건 무료, 1000~1500건 x 2원 계산 = 1000원" class="cls-3" transform="translate(960 1728)">
+<tspan x="-305.088" y="0" class="cls-50">Masking 기능과 Ratio 기능은 별도로 계산이 됩니다.</tspan>
+<tspan class="cls-4">
+  <tspan x="-272.86" y="28">예) Masking 500건, Ratio 500건 이용시 이용요금 부과 x</tspan>
+</tspan>
+<tspan class="cls-5">
+  <tspan x="0" y="56"></tspan>
+</tspan>
+<tspan x="-405.076" y="84" class="cls-50">정해진 범위 안에 있는 요청 개수는 해당 범위안의 요금으로 계산됩니다.</tspan>
+<tspan class="cls-4"><tspan x="-422.613" y="112">예) Masking 기능 1500건 이용시, 0~1000건 무료, 1000~1500건 x 2원 계산 = 1000원</tspan></tspan></text>
     <g class="cls-20" transform="matrix(1, 0, 0, 1, 0, 89)">
       <g id="사각형_40-2" data-name="사각형 40" class="cls-6" transform="translate(400 1184)">
         <rect class="cls-17" width="525" height="331" rx="30"/>
