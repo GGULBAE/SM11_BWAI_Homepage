@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './fonts/bahnschrift-cufonfonts-webfont/style.css';
-
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 
