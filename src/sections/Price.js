@@ -1,11 +1,16 @@
 import React from 'react';
 
 export default function Price(props) {
-    return <span>price</span>
-    // return <embed style={priceWrapper} src={require("../assets/Price.svg")} type="image/svg+xml">
-    // </embed>
+    return <React.Fragment>
+    <div style={style_Navigation_Shadow}></div>
+    <embed style={priceWrapper} src={require("../assets/Price.svg")} type="image/svg+xml"></embed>
+</React.Fragment>
 }
-// eslint-disable-next-line
+
+const style_Navigation_Shadow = {
+    height: "96px"
+}
+
 const priceWrapper = {
     width: "100%"
 }
