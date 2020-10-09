@@ -18,7 +18,7 @@ export default function NavigationBar(props) {
 
   console.log(highlight);
   return (
-    <div style={style_NavigationWrapper}>
+    <div style={highlight !== "home" ? style_NavigationWrapper : style_NavigationWrapper_main}>
       <div style={style_NavigationLogo}>
         <img src={require("../assets/logo_bwai.svg")} alt="" linkto={"home"} onClick={linkTo}/>
       </div>
@@ -40,7 +40,8 @@ function NavigationBtn({text, highlight}) {
   </div>
 }
 
-const absolute_top_value = (59 / 2) + "px";
+// const absolute_top_value = (59 / 2) + "px";
+const absolute_top_value = 50 + "px";
 
 const style_NavigationWrapper = {
   position: "absolute",
@@ -53,7 +54,13 @@ const style_NavigationWrapper = {
   lineHeight: "34px",
   width: "100vw",
   backgroundColor: "#000",
-  height: "93px"
+  height: "136px"
+}
+
+const style_NavigationWrapper_main = {
+  ...style_NavigationWrapper,
+  height: "auto",
+  backgroundColor: "none"
 }
 
 const style_NavigationLogo = {
@@ -69,7 +76,7 @@ const style_NavigationBtns = {
 
 const style_NavigationBtn = {
   display: "inline-block",
-  margin: "0px 18px 0 18px",
+  margin: "0px 23px 0 23px",
   marginTop: absolute_top_value,
   cursor: "pointer"
 }
