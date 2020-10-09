@@ -40,19 +40,22 @@ export default function Labelling(props) {
             })
     }, [labeled])
 
-    return <div style={style_Labelling_Wrapper}>
+    return <React.Fragment>
         <div style={style_Navigation_Shadow}></div>
-        <div style={{width: "100%"}}>
-            <embed style={{width: "100%"}} src={require("../assets/LabelingTitle.svg")} type="image/svg+xml"></embed>
+        <div style={style_Labelling_Wrapper}>
+            
+            <div style={{width: "100%"}}>
+                <embed style={{width: "100%", paddingBottom: "50px"}} src={require("../assets/LabelingTitle.svg")} type="image/svg+xml"></embed>
+            </div>
+            {
+                posts ? <POSTWrapper data={posts} /> : <></>
+            }
         </div>
-        {
-            posts ? <POSTWrapper data={posts} /> : <></>
-        }
-    </div>
+    </React.Fragment>
 }
 
 const style_Labelling_Wrapper = {
-    padding: "120px 400px"
+    padding: "50px 400px"
 }
 
 const style_Navigation_Shadow = {
@@ -173,7 +176,8 @@ const postWrapperStyle = {
 }
 
 const POST_STYLE = {
-    marginTop: "24px",
+    margin: "0px",
+    marginBottom: "24px",
     padding: "8px",
     border: "1px solid grey",
     fontSize: "16px",
