@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './fonts/bahnschrift-cufonfonts-webfont/style.css';
+
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 
@@ -9,7 +11,7 @@ import Team from './sections/Team.js';
 import Service from './sections/Service.js';
 import Price from './sections/Price.js';
 import Labelling from './components/Labelling.js';
-import test from './test/test.js';
+// import test from './test/test.js';
 
 var hist = createBrowserHistory();
 
@@ -24,7 +26,7 @@ function App() {
           <Route exact path="/price" component={Price}/>
           <Route exact path="/demo" component={Temp}/>
           <Route exact path="/labelling" component={Labelling}/>
-          <Route exact path="/test" component={test}/>
+          {/* <Route exact path="/test" component={test}/> */}
           <Route path="/" component={Home}/>
         </Switch>
       </Router>

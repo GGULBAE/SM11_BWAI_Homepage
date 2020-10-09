@@ -42,10 +42,11 @@ function NavigationBtn({text, highlight}) {
 
 const style_NavigationWrapper = {
   position: "absolute",
+  fontFamily: "Bahnschrift",
   top: "40px",
   zIndex: "100",
   color: "#707070",
-  fontSize: "20px",
+  fontSize: "24px",
   fontWeight: "400",
   letterSpacing: "30",
   lineHeight: "34px",
