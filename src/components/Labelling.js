@@ -42,8 +42,8 @@ export default function Labelling(props) {
 
     return <div style={style_Labelling_Wrapper}>
         <div style={style_Navigation_Shadow}></div>
-        <div>
-            <embed src={require("../assets/LabelingTitle.svg")} type="image/svg+xml"></embed>
+        <div style={{width: "100%"}}>
+            <embed style={{width: "100%"}} src={require("../assets/LabelingTitle.svg")} type="image/svg+xml"></embed>
         </div>
         {
             posts ? <POSTWrapper data={posts} /> : <></>
@@ -52,8 +52,9 @@ export default function Labelling(props) {
 }
 
 const style_Labelling_Wrapper = {
-    padding: "120px 196px"
+    padding: "120px 400px"
 }
+
 const style_Navigation_Shadow = {
     height: "96px"
 }

@@ -1,29 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="376" height="90" viewBox="0 0 376 90">
+<svg xmlns="http://www.w3.org/2000/svg" width="1121" height="126" viewBox="0 0 1121 126">
   <defs>
     <style>
       .cls-1 {
-        fill: #feba8f;
+        font-size: 40px;
+      }
+
+      .cls-1, .cls-3 {
+        font-family: NotoSansKR-Bold, Noto Sans KR;
+        font-weight: 700;
       }
 
       .cls-2 {
-        fill: #b2ccfa;
+        fill: #feba8f;
       }
 
       .cls-3 {
-        fill: #fbb117;
+        stroke: rgba(0,0,0,0);
+        font-size: 24px;
       }
 
       .cls-4 {
-        stroke: rgba(0,0,0,0);
-        font-size: 25px;
-        font-family: NanumSquareOTFB, NanumSquareOTF;
+        fill: #b2ccfa;
+      }
+
+      .cls-5 {
+        fill: #c3f8fc;
       }
     </style>
   </defs>
-  <g id="그룹_96" data-name="그룹 96" transform="translate(-196 -205)">
-    <rect id="사각형_46" data-name="사각형 46" class="cls-1" width="95" height="20" transform="translate(196 205)"/>
-    <rect id="사각형_47" data-name="사각형 47" class="cls-2" width="95" height="20" transform="translate(196 240)"/>
-    <rect id="사각형_48" data-name="사각형 48" class="cls-3" width="95" height="20" transform="translate(196 275)"/>
-    <text id="LabelingBySentence" class="cls-4" transform="translate(332 285)"><tspan x="0" y="0">LabelingBySentence</tspan></text>
+  <g id="Group_99" data-name="Group 99" transform="translate(-399 -185)">
+    <text id="LABELLING" class="cls-1" transform="translate(509 232)"><tspan x="-109.18" y="0">LABELLING</tspan></text>
+    <g id="Group_96" data-name="Group 96" transform="translate(-205)">
+      <rect id="Rectangle_46" data-name="Rectangle 46" class="cls-2" width="95" height="20" transform="translate(1630 194)"/>
+      <text id="Exist" class="cls-3" transform="translate(1563 214)"><tspan x="-27.924" y="0">Exist</tspan></text>
+    </g>
+    <g id="Group_97" data-name="Group 97" transform="translate(-205)">
+      <rect id="Rectangle_47" data-name="Rectangle 47" class="cls-4" width="95" height="20" transform="translate(1630 238)"/>
+      <text id="Non-Exist" class="cls-3" transform="translate(1535 258)"><tspan x="-56.556" y="0">Non-Exist</tspan></text>
+    </g>
+    <g id="Group_98" data-name="Group 98" transform="translate(-205)">
+      <rect id="Rectangle_48" data-name="Rectangle 48" class="cls-5" width="95" height="20" transform="translate(1630 282)"/>
+      <text id="Dummy" class="cls-3" transform="translate(1547 302)"><tspan x="-46.236" y="0">Dummy</tspan></text>
+    </g>
   </g>
 </svg>
