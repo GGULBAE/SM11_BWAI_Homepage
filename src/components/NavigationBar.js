@@ -45,7 +45,7 @@ const style_NavigationWrapper = {
   top: "40px",
   zIndex: "100",
   color: "#707070",
-  fontSize: "28px",
+  fontSize: "20px",
   fontWeight: "400",
   letterSpacing: "30",
   lineHeight: "34px",
@@ -64,15 +64,13 @@ const style_NavigationBtns = {
 
 const style_NavigationBtn = {
   display: "inline-block",
-  margin: "0 36px 0 0 ",
+  margin: "0 18px 0 18px",
   cursor: "pointer"
 }
 
 const style_NavigationBtnHighlight = {
+  ...style_NavigationBtn,
   color: "#FFF",
-  display: "inline-block",
-  margin: "0 36px 0 0 ",
-  cursor: "pointer"
 }
 
 const style_NavigationDashBoard = {
