@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="376" height="90" viewBox="0 0 376 90">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #feba8f;
+      }
+
+      .cls-2 {
+        fill: #b2ccfa;
+      }
+
+      .cls-3 {
+        fill: #fbb117;
+      }
+
+      .cls-4 {
+        stroke: rgba(0,0,0,0);
+        font-size: 25px;
+        font-family: NanumSquareOTFB, NanumSquareOTF;
+      }
+    </style>
+  </defs>
+  <g id="그룹_96" data-name="그룹 96" transform="translate(-196 -205)">
+    <rect id="사각형_46" data-name="사각형 46" class="cls-1" width="95" height="20" transform="translate(196 205)"/>
+    <rect id="사각형_47" data-name="사각형 47" class="cls-2" width="95" height="20" transform="translate(196 240)"/>
+    <rect id="사각형_48" data-name="사각형 48" class="cls-3" width="95" height="20" transform="translate(196 275)"/>
+    <text id="LabelingBySentence" class="cls-4" transform="translate(332 285)"><tspan x="0" y="0">LabelingBySentence</tspan></text>
+  </g>
+</svg>

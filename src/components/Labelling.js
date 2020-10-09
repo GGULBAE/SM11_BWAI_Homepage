@@ -40,17 +40,24 @@ export default function Labelling(props) {
             })
     }, [labeled])
 
-    return <div>
+    return <div style={style_Labelling_Wrapper}>
         <div style={style_Navigation_Shadow}></div>
+        <div>
+            <embed src={require("../assets/LabelingTitle.svg")} type="image/svg+xml"></embed>
+        </div>
         {
             posts ? <POSTWrapper data={posts} /> : <></>
         }
     </div>
 }
 
+const style_Labelling_Wrapper = {
+    padding: "120px 196px"
+}
 const style_Navigation_Shadow = {
     height: "96px"
 }
+
 function POSTWrapper({ data }) {
     const [success_many, setSuccess_many] = useState(0);
 
@@ -98,7 +105,9 @@ class POST extends React.Component {
         }
         this.postRef = React.createRef();
     }
-    // #C3F8FC
+    // 욕설O 1  FEBA8F
+    // 욕설X 0  B2CCFA
+    // 필요X -1 #C3F8FC
     toggleColor = () => {
         var color = this.state.color;
         var newColor;
