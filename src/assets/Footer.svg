@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="288" viewBox="0 0 1920 288">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #222d39;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-size: 24px;
+        font-family: NanumSquareOTFR, NanumSquareOTF;
+      }
+
+      .cls-3 {
+        font-size: 20px;
+        font-family: NotoSansKR-Bold, Noto Sans KR;
+        font-weight: 700;
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+  <g id="그룹_96" data-name="그룹 96" transform="translate(0 -1946)">
+    <g id="그룹_95" data-name="그룹 95" transform="translate(0 -1647)">
+      <rect id="사각형_123" data-name="사각형 123" class="cls-1" width="1920" height="288" transform="translate(0 3593)"/>
+      <text id="BWAI는_SWMestro에서_진행된_프로젝트입니다._copyright_2020_All_rights_reserved_by_BWAI" data-name="BWAI는 SWMestro에서 진행된 프로젝트입니다.
+copyright 2020 All rights reserved by BWAI" class="cls-2" transform="translate(960 3739)"><tspan x="-248.544" y="0">BWAI는 SWMESTRO에서 진행된 프로젝트입니다.</tspan><tspan x="-273.828" y="36">COPYRIGHT 2020 ALL RIGHTS RESERVED BY BWAI</tspan></text>
+      <g id="그룹_93" data-name="그룹 93" transform="translate(0 2415)">
+        <text id="LABELLING" class="cls-3" transform="translate(1267 1248)"><tspan x="-54.59" y="0">LABELLING</tspan></text>
+        <text id="DEMO" class="cls-3" transform="translate(1122 1248)"><tspan x="-29.53" y="0">DEMO</tspan></text>
+        <text id="PRICE" class="cls-3" transform="translate(1002 1248)"><tspan x="-29.51" y="0">PRICE</tspan></text>
+        <text id="SERVICE" class="cls-3" transform="translate(872 1248)"><tspan x="-41.32" y="0">SERVICE</tspan></text>
+        <text id="TEAM" class="cls-3" transform="translate(744 1248)"><tspan x="-27.35" y="0">TEAM</tspan></text>
+        <text id="HOME" class="cls-3" transform="translate(627 1248)"><tspan x="-29.96" y="0">HOME</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>

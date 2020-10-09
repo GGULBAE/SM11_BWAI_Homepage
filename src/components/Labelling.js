@@ -51,11 +51,12 @@ export default function Labelling(props) {
                 posts ? <POSTWrapper data={posts} /> : <></>
             }
         </div>
+        <embed style={{width: "100%"}} src={require("../assets/Footer.svg")} type="image/svg+xml"></embed>
     </React.Fragment>
 }
 
 const style_Labelling_Wrapper = {
-    padding: "50px 400px"
+    padding: "50px 400px 0 400px"
 }
 
 const style_Navigation_Shadow = {
@@ -94,9 +95,9 @@ function POSTWrapper({ data }) {
             data ? data.map((data, index) => <POST ref={Refs[index]} success={success} key={index} postData={data} />) : null
         }
         <div style={{margin: "16px"}}></div>
-        <button variant="contained" color="primary" onClick={submit}>
-            전체 라벨링 완료
-        </button>
+        <div style={style_Labelling_Btn} onClick={submit}>
+            <embed style={style_Labelling_Btn_SVG} src={require("../assets/LabellingButton.svg")} type="image/svg+xml"></embed>
+        </div>
     </div>
 }
 
@@ -164,22 +165,30 @@ class POST extends React.Component {
             <div ref={this.postRef} onClick={this.toggleColor}>
                 <p style={POST_STYLE}>{postData.string}</p>
             </div>
-            <button size="small" variant="contained" color="primary" onClick={this.submit}>
-                라벨링 완료
-            </button>
         </div>
     }
 }
 
 const postWrapperStyle = {
-
+    boxShadow: "3px 3px 10px rgba(0, 0, 0, 0.3)"
 }
 
 const POST_STYLE = {
     margin: "0px",
     marginBottom: "24px",
     padding: "8px",
-    border: "1px solid grey",
     fontSize: "16px",
-    fontWeight: "bold"
+    fontFamily: "NanumSquareOTFB",
+    fontWeight: "bold",
+}
+
+const style_Labelling_Btn = {
+    padding: "50px 0 100px 0",
+}
+
+const style_Labelling_Btn_SVG = {
+    position: "absolute",
+    left: "50%",
+    transform: "translate(-50%, 0)",
+    width: "150px"
 }

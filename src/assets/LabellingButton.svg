@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="288" height="97" viewBox="0 0 288 97">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #502eff;
+        stroke: #502eff;
+        stroke-width: 5px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-size: 32px;
+        font-family: NanumSquareOTFB, NanumSquareOTF;
+      }
+
+      .cls-3 {
+        stroke: none;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        filter: url(#bg);
+      }
+    </style>
+    <filter id="bg" x="0" y="0" width="288" height="97" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_99" data-name="Group 99" transform="translate(-824 -2515)">
+    <g class="cls-5" transform="matrix(1, 0, 0, 1, 824, 2515)">
+      <g id="bg-2" data-name="bg" class="cls-1" transform="translate(4 4)">
+        <rect class="cls-3" width="270" height="79" rx="39.5"/>
+        <rect class="cls-4" x="2.5" y="2.5" width="265" height="74" rx="37"/>
+      </g>
+    </g>
+    <text id="완료" class="cls-2" transform="translate(963 2568)"><tspan x="-29.12" y="0">완료</tspan></text>
+  </g>
+</svg>
