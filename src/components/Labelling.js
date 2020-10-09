@@ -96,7 +96,7 @@ function POSTWrapper({ data }) {
         }
         <div style={{margin: "16px"}}></div>
         <div style={style_Labelling_Btn} onClick={submit}>
-            <embed style={style_Labelling_Btn_SVG} src={require("../assets/LabellingButton.svg")} type="image/svg+xml"></embed>
+            <img style={style_Labelling_Btn_SVG} src={require("../assets/LabellingButton.svg")} alt=""></img>
         </div>
     </div>
 }
@@ -143,7 +143,7 @@ class POST extends React.Component {
 
     submit = () => {
         var doc_id = this.props.postData._id;
-        var url = window.serverUrl + "/api/v2/set/label";
+        var url = apiServer + "/api/v2/set/label";
         var form = {
             "document_id": doc_id,
             "label": this.getLabel()

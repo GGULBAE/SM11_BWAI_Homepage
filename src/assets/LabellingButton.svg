@@ -11,6 +11,7 @@
         fill: #fff;
         font-size: 32px;
         font-family: NanumSquareOTFB, NanumSquareOTF;
+        font-weight: bold;
       }
 
       .cls-3 {
