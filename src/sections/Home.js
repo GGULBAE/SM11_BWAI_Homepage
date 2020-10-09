@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
-import './Home.css';
+// import './Home.css';
 // var automatic_scroll;
 
 // function afterLoad(origin, destination, direction) {
