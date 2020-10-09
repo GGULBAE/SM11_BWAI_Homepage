@@ -1,14 +1,40 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+/* @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); */
 
 @font-face {
   font-family: 'NanumSquareOTF';
   src: url('./fonts/nanumsquare/NanumSquareB.ttf') format('truetype');
 }
 
+/* @font-face {
+  font-family: 'NotoSansKR-Black';
+  src: url('./fonts/Noto_Sans_KR/NotoSansKR-Black.otf') format('otf');
+} */
+
+@font-face {
+  font-family: 'NotoSansKR-Bold';
+  src: local('NotoSansKR-Bold'), url('./fonts/Noto_Sans_KR/NotoSansKR-Bold.otf') format('opentype');
+}
+/* 
+@font-face {
+  font-family: 'NotoSansKR-Light';
+  src: url('./fonts/Noto_Sans_KR/NotoSansKR-Light.otf') format('otf');
+}
+@font-face {
+  font-family: 'NotoSansKR-Medium';
+  src: url('./fonts/Noto_Sans_KR/NotoSansKR-Medium.otf') format('otf');
+}
+@font-face {
+  font-family: 'NotoSansKR-Regular';
+  src: url('./fonts/Noto_Sans_KR/NotoSansKR-Regular.otf') format('otf');
+}
+@font-face {
+  font-family: 'NotoSansKR-Thin';
+  src: url('./fonts/Noto_Sans_KR/NotoSansKR-Thin.otf') format('otf');
+} */
 html, body {
   margin: 0;
   padding: 0;
-  /* font-family: "Noto Sans KR", sans-serif; */
+  /* font-family: 'NotoSansKR-Bold'; */
 }
 
 body {

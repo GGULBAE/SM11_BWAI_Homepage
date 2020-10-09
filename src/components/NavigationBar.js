@@ -41,15 +41,15 @@ function NavigationBtn({text, highlight}) {
 }
 
 // const absolute_top_value = (59 / 2) + "px";
-const absolute_top_value = 50 + "px";
+
+const absolute_top_value = (136 - 34) / 2 + "px";
 
 const style_NavigationWrapper = {
   position: "absolute",
-  fontFamily: "Noto Sans KR, sans-serif",
+  fontFamily: "NotoSansKR-Bold",
   zIndex: "100",
   color: "#707070",
   fontSize: "24px",
-  fontWeight: "400",
   letterSpacing: "30",
   lineHeight: "34px",
   width: "100vw",
@@ -65,7 +65,8 @@ const style_NavigationWrapper_main = {
 
 const style_NavigationLogo = {
   position: "absolute",
-  top: absolute_top_value,
+  top: "50%",
+  transform: "translate(0, -50%)",
   left: "48px",
   cursor: "pointer"
 }
