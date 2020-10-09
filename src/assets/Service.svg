@@ -175,6 +175,7 @@
 
       .cls-35, .cls-37, .cls-48, .cls-50, .cls-51 {
         font-family: NanumSquareOTFB, NanumSquareOTF;
+        font-weight: 700;
       }
 
       .cls-36, .cls-51 {
