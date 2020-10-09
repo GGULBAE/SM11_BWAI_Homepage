@@ -40,21 +40,25 @@ function NavigationBtn({text, highlight}) {
   </div>
 }
 
+const absolute_top_value = (59 / 2) + "px";
+
 const style_NavigationWrapper = {
   position: "absolute",
-  fontFamily: "Bahnschrift",
-  top: "40px",
+  fontFamily: "Noto Sans KR, sans-serif",
   zIndex: "100",
   color: "#707070",
   fontSize: "24px",
   fontWeight: "400",
   letterSpacing: "30",
   lineHeight: "34px",
-  width: "100vw"
+  width: "100vw",
+  backgroundColor: "#000",
+  height: "93px"
 }
 
 const style_NavigationLogo = {
   position: "absolute",
+  top: absolute_top_value,
   left: "48px",
   cursor: "pointer"
 }
@@ -65,7 +69,8 @@ const style_NavigationBtns = {
 
 const style_NavigationBtn = {
   display: "inline-block",
-  margin: "0 18px 0 18px",
+  margin: "0px 18px 0 18px",
+  marginTop: absolute_top_value,
   cursor: "pointer"
 }
 
@@ -76,7 +81,7 @@ const style_NavigationBtnHighlight = {
 
 const style_NavigationDashBoard = {
   position: "absolute",
-  top: "0px",
+  top: absolute_top_value,
   right: "48px",
   cursor: "pointer"
 }

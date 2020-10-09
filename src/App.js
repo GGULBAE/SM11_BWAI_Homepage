@@ -37,5 +37,5 @@ function App() {
 export default App;
 
 function Temp() {
-  return <p>Not Prepared!</p>
+  return <span>Not Prepared!</span>
 }

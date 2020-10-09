@@ -1,17 +1,14 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
 @font-face {
   font-family: 'NanumSquareOTF';
   src: url('./fonts/nanumsquare/NanumSquareB.ttf') format('truetype');
 }
 
-@font-face {
-  font-family: "Bahnschrift";
-  src: url('./fonts/Bahnschrift-Font/BAHNSCHRIFT.TTF') format('truetype');
-}
-
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'NanumSquareOTF';
+  /* font-family: "Noto Sans KR", sans-serif; */
 }
 
 body {
