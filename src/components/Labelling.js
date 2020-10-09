@@ -95,8 +95,8 @@ function POSTWrapper({ data }) {
             data ? data.map((data, index) => <POST ref={Refs[index]} success={success} key={index} postData={data} />) : null
         }
         <div style={{margin: "16px"}}></div>
-        <div style={style_Labelling_Btn} onClick={submit}>
-            <img style={style_Labelling_Btn_SVG} src={require("../assets/LabellingButton.svg")} alt=""></img>
+        <div style={style_Labelling_Btn}>
+            <img onClick={submit} style={style_Labelling_Btn_SVG} src={require("../assets/LabellingButton.svg")} alt=""></img>
         </div>
     </div>
 }
