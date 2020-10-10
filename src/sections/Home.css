@@ -11,8 +11,9 @@
 }
 
 .AnimateLeft {
-    animation: slideLeft 5s ease-in-out infinite;
-    -webkit-animation: slideLeft 5s ease-in-out infinite;
+    animation: slideLeft 5s ease-in-out;
+    -webkit-animation: slideLeft 5s ease-in-out;
+    animation-fill-mode: forwards; 
 }
 
 #MainRemains {
@@ -25,8 +26,8 @@
 }
 
 .AnimateOpacity {
-    animation: showTransparent 5s ease-in-out infinite;
-    -webkit-animation: showTransparent 5s ease-in-out infinite;
+    animation: showTransparent 5s ease-in-out;
+    -webkit-animation: showTransparent 5s ease-in-out;
 }
 
 @keyframes slideLeft {

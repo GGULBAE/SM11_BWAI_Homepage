@@ -55,6 +55,11 @@
   src: url('./fonts/nanumsquare/NanumSquareB.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'YunGothic320';
+  src: url('./fonts/YunGothic/YunGothic320.ttf') format('truetype');
+}
+
 
 @font-face {
   font-family: 'NotoSansKR-Black';

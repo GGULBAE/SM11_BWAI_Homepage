@@ -65,6 +65,7 @@ const Fullpage = () => (
               <embed style={style_AboutUs} src={require("../assets/AboutUs.svg")} type="image/svg+xml"></embed>
               <img id="MainB" src={require("../assets/Main_B.svg")} alt=""></img>
               <img id="MainRemains" src={require("../assets/Main_Remain.svg")} alt=""></img>
+              {/* <img id="MainRemains" src={require("../assets/MainRemains.jpg")} alt=""></img> */}
 
             </div>
             <div className="slide" style={style_Slide}>
