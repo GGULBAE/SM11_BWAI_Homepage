@@ -2,13 +2,10 @@ import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
 import './Home.css';
 var automatic_scroll;
-var automatic_animation;
 
 function afterLoad(origin, destination, direction) {
   if (automatic_scroll)
     clearInterval(automatic_scroll);
-  if (automatic_animation)
-    clearInterval(automatic_animation);
   
   automatic_scroll = setInterval(() => {
     var target = document.getElementsByClassName("fp-controlArrow fp-next");
@@ -17,18 +14,28 @@ function afterLoad(origin, destination, direction) {
     } else {
       return;
     }
-    target.click();
-  }, 3000)
+    // target.click();
+  }, 5000)
 
-  automatic_animation = start_Animation();
+  start_Animation();
 }
 
 function start_Animation() {
   console.log("AnimationStart");
+  const mainB = document.getElementById("MainB");
+  const mainRemains = document.getElementById("MainRemains");
+
+  mainB.classList.add("AnimateLeft");
+  mainRemains.classList.add("AnimateOpacity");
 }
 
 function end_Animation() {
   console.log("AnimationEnd");
+  const mainB = document.getElementById("MainB");
+  const mainRemains = document.getElementById("MainRemains");
+
+  mainB.classList.remove("AnimateLeft");
+  mainRemains.classList.remove("AnimateOpacity");
 }
 
 function afterSlideLoad(section, origin, destination, direction) {
@@ -46,7 +53,7 @@ const Fullpage = () => (
     //fullpage options
     licenseKey = {'YOUR_KEY_HERE'}
     arrowNavigation ={false}
-    scrollingSpeed = {750} /* Options here */
+    scrollingSpeed = {1000} /* Options here */
     afterLoad = {afterLoad}
     afterSlideLoad = {afterSlideLoad}
     render={({ state, fullpageApi }) => {
@@ -56,8 +63,8 @@ const Fullpage = () => (
             <div className="slide" style={style_Slide}>
               <embed style={style_Main} src={require("../assets/homepage1.svg")} type="image/svg+xml"></embed>
               <embed style={style_AboutUs} src={require("../assets/AboutUs.svg")} type="image/svg+xml"></embed>
-              <embed style={style_B} src={require("../assets/Main_B.svg")} type="image/svg+xml"></embed>
-              {/* <embed style={style_B} src={require("../assets/Main_Remain.svg")} type="image/svg+xml"></embed> */}
+              <img id="MainB" src={require("../assets/Main_B.svg")} alt=""></img>
+              <img id="MainRemains" src={require("../assets/Main_Remain.svg")} alt=""></img>
 
             </div>
             <div className="slide" style={style_Slide}>
@@ -94,11 +101,4 @@ const style_AboutUs = {
   position: "absolute",
   right: "120px",
   bottom: "65px"
-}
-
-const style_B = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)"
 }

@@ -1,3 +1,44 @@
 .fp-controlArrow {
-    /* display: none; */
+    display: none;
+}
+
+#MainB {
+    position: absolute;
+    width: 6.25vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.AnimateLeft {
+    animation: slideLeft 5s ease-in-out infinite;
+    -webkit-animation: slideLeft 5s ease-in-out infinite;
+}
+
+#MainRemains {
+    position: absolute;
+    width: 40.7vw;
+    top: 50%;
+    left: calc(50% + 3.125vw);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.AnimateOpacity {
+    animation: showTransparent 5s ease-in-out infinite;
+    -webkit-animation: showTransparent 5s ease-in-out infinite;
+}
+
+@keyframes slideLeft {
+    0%   { left: 50%;}
+    20%  { left: 50%;}
+    25%  { left: calc(26% + 3.125vw);}
+    100% { left: calc(26% + 3.125vw);}
+}
+
+@keyframes showTransparent {
+    0%   { opacity: 0;}
+    20%  { opacity: 0;}
+    25%  { opacity: 1;}
+    100% { opacity: 1;}
 }
