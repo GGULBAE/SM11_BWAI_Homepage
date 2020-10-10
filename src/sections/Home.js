@@ -14,7 +14,7 @@ function afterLoad(origin, destination, direction) {
     } else {
       return;
     }
-    // target.click();
+    target.click();
   }, 5000)
 
   start_Animation();
