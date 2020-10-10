@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="783" height="163" viewBox="0 0 783 163">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+        font-family: Helvetica;
+      }
+
+      .cls-1 {
+        font-size: 125px;
+      }
+
+      .cls-2 {
+        font-size: 163px;
+      }
+    </style>
+  </defs>
+  <g id="그룹_97" data-name="그룹 97" transform="translate(-629 -473)">
+    <text id="ad" class="cls-1" transform="translate(699 582)"><tspan x="-69.519" y="0">ad</tspan></text>
+    <text id="Word" class="cls-2" transform="translate(1015 599)"><tspan x="-193.284" y="0">Word</tspan></text>
+    <text id="AI" class="cls-2" transform="translate(1334 599)"><tspan x="-77.003" y="0">AI</tspan></text>
+  </g>
+</svg>
