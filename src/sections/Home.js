@@ -71,10 +71,18 @@ const Fullpage = () => (
             <div className="slide" style={style_Slide}>
               <embed style={style_Main} src={require("../assets/homepage2.svg")} type="image/svg+xml"></embed>
               <embed style={style_AboutUs} src={require("../assets/AboutUs.svg")} type="image/svg+xml"></embed>
+              <div style={style_MainText}>
+                <p style={style_MainTextTitle}>AI를 활용한 비속어 탐지 시스템</p>
+                <p style={style_MainTextSubTitle}>API를 이용한 편리한 서비스 관리</p>
+              </div>
             </div>
             <div className="slide" style={style_Slide}>
               <embed style={style_Main} src={require("../assets/homepage3.svg")} type="image/svg+xml"></embed>
               <embed style={style_AboutUs} src={require("../assets/AboutUs.svg")} type="image/svg+xml"></embed>
+              <div style={style_MainText}>
+                <p style={style_MainTextTitle}>110만개 데이터 딥러닝 모델 분석</p>
+                <p style={style_MainTextSubTitle}>https 통신만 가능하면 어떤 플랫폼도 이용가능</p>
+              </div>
             </div>
           </div>
         </ReactFullpage.Wrapper>
@@ -92,6 +100,7 @@ export default function Home(props) {
 const style_Slide = {
   position: "relative"
 }
+
 const style_Main = {
   position: "absolute",
   width: "100vw",
@@ -102,4 +111,28 @@ const style_AboutUs = {
   position: "absolute",
   right: "120px",
   bottom: "65px"
+}
+
+const style_MainText = {
+  color: "#FFF",
+  position: "absolute",
+  top: "50%",
+  width: "100vw",
+  transform: "translate(0, -50%)"
+}
+
+const style_MainText_P = {
+  fontSize: "2.5em",
+  margin: "0",
+  textAlign: "center"
+}
+const style_MainTextTitle = {
+  ...style_MainText_P,
+  fontFamily: "NanumSquareOTFEB",
+  marginBottom: "20px"
+}
+
+const style_MainTextSubTitle = {
+  ...style_MainText_P,
+  fontFamily: "NanumSquareOTFL",
 }
