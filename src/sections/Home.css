@@ -5,15 +5,14 @@
 #MainB {
     position: absolute;
     width: 6.25vw;
-    top: 48%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .AnimateLeft {
-    animation: slideLeft 5s ease-in-out;
-    -webkit-animation: slideLeft 5s ease-in-out;
-    animation-fill-mode: forwards; 
+    animation: slideLeft 5s ease-in-out forwards;
+    -webkit-animation: slideLeft 5s ease-in-out forwards;
 }
 
 #MainRemains {
@@ -26,8 +25,8 @@
 }
 
 .AnimateOpacity {
-    animation: showTransparent 5s ease-in-out;
-    -webkit-animation: showTransparent 5s ease-in-out;
+    animation: showTransparent 5s ease-in-out forwards;
+    -webkit-animation: showTransparent 5s ease-in-out forwards;
 }
 
 @keyframes slideLeft {
