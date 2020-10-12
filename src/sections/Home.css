@@ -2,12 +2,29 @@
     display: none;
 }
 
-#MainB {
+#MainB, #MainRemains {
     position: absolute;
+    bottom: calc(50% - (40.7vw / 6.318170239689726 / 2));
+
+    /* 
+        Remains Ratio
+
+        6.318170239689726 : 1
+        
+        Remains Width
+        
+        40.7vw
+
+        6.318170239689726 : 1 = 40.7vw : ?(height)
+        40.7vw = 6.318170239689726 * ?(height)
+        ?(height) =  40.7vw / 6.318170239689726 
+    */
+}
+
+#MainB {
     width: 6.25vw;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
 }
 
 .AnimateLeft {
@@ -16,12 +33,10 @@
 }
 
 #MainRemains {
-    position: absolute;
     width: 40.7vw;
-    top: 50%;
     left: calc(50% + 3.125vw);
-    transform: translate(-50%, -50%);
     opacity: 0;
+    transform: translate(-50%, 0);
 }
 
 .AnimateOpacity {

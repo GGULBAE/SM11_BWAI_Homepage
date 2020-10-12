@@ -124,6 +124,7 @@ const style_MainText_P = {
   margin: "0",
   textAlign: "center"
 }
+
 const style_MainTextTitle = {
   ...style_MainText_P,
   fontFamily: "NanumSquareOTFEB",
