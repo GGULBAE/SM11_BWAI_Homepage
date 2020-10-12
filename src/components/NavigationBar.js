@@ -52,7 +52,7 @@ const style_NavigationWrapper = {
   fontSize: "20px",
   letterSpacing: "30",
   lineHeight: "34px",
-  width: "100vw",
+  width: "100%",
   backgroundColor: "#000",
   height: "96px"
 }
