@@ -20,7 +20,7 @@ export default function NavigationBar(props) {
   return (
     <div style={highlight !== "home" ? style_NavigationWrapper : style_NavigationWrapper_main}>
       <div style={style_NavigationLogo}>
-        <img src={require("../assets/logo_bwai.svg")} alt="" linkto={"home"} onClick={linkTo}/>
+        <img src={require("../assets/Logo_BWAI.svg")} alt="" linkto={"home"} onClick={linkTo}/>
       </div>
       <div style={style_NavigationBtns}>
         {
