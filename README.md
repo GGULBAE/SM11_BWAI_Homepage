@@ -1,10 +1,8 @@
-## Main Intro
+## Intro
 
 BWAI is abbreviations of Bad Words Artificial Intelligence.
-
-BWAI는 SWMESTRO에서 진행된 프로젝트입니다.
-
-BWAI의 최종 발표 및 팀 소개 Web Pages 입니다.
+BWAI is sponsored by 11st of SWMaestro.
+It's for final presentation and demo functions.
 
 ## How To Use
 
