@@ -9,15 +9,14 @@ function getRandomInt(min, max) {
 }
 
 const pages = getRandomInt(1, 1000);
-const apiServer = "http://3.34.202.83";
+const apiServer = "http://3.35.200.169";
 
 export default function Labelling(props) {
-    const [labeled, setLabeled] = useState(0);
     const [posts, setPosts] = useState(0);
 
     useEffect(() => {
         if (!posts) {
-            var url = apiServer + "/api/v2/get/posts/"+ pages +"/0";
+            var url = `${apiServer}/api/v3/get/posts/${pages}/0/30`;
             Axios.get(url)
                 .then((res) => {
                     console.log(res);
@@ -30,15 +29,6 @@ export default function Labelling(props) {
                 })
         }
     }, [posts]);
-
-    useEffect(() => {
-        var url = apiServer + "/api/v2/label/status";
-        Axios.get(url)
-            .then((res) => {
-                console.log(res);
-                setLabeled(res.data.data);
-            })
-    }, [labeled])
 
     return <React.Fragment>
         <div style={style_Navigation_Shadow}></div>
@@ -143,7 +133,8 @@ class POST extends React.Component {
 
     submit = () => {
         var doc_id = this.props.postData._id;
-        var url = apiServer + "/api/v2/set/label";
+        var url = `${apiServer}/api/v3/set/label`;
+
         var form = {
             "document_id": doc_id,
             "label": this.getLabel()
@@ -190,5 +181,6 @@ const style_Labelling_Btn_SVG = {
     position: "absolute",
     left: "50%",
     transform: "translate(-50%, 0)",
-    width: "150px"
+    width: "150px",
+    cursor: "pointer"
 }
