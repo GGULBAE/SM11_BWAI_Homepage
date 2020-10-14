@@ -1,42 +1,20 @@
-/* @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); */
-
-/* @font-face {
-  font-family: 'NanumSquareOTFR';
-  src: url('./fonts/nanumsquare/NanumSquareR.ttf') format('truetype'), url('./fonts/nanumsquare/NanumSquare_acR.ttf') format('truetype');
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src: url('./fonts/NanumBarunGothic/NanumBarunGothic.otf') format('opentype');
+}
+@font-face {
+  font-family: 'NanumBarunGothicBold';
+  src: url('./fonts/NanumBarunGothic/NanumBarunGothicBold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'NanumBarunGothicLight';
+  src: url('./fonts/NanumBarunGothic/NanumBarunGothicLight.otf') format('opentype');
+}
+@font-face {
+  font-family: 'NanumBarunGothicUltraLight';
+  src: url('./fonts/NanumBarunGothic/NanumBarunGothicUltraLight.otf') format('opentype');
 }
 
-@font-face {
-  font-family: 'NanumSquareOTFL';
-  src: url('./fonts/nanumsquare/NanumSquareL.ttf') format('truetype'), url('./fonts/nanumsquare/NanumSquare_acL.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'NanumSquareOTFB';
-  src: url('./fonts/nanumsquare/NanumSquareB.ttf') format('truetype'), url('./fonts/nanumsquare/NanumSquare_acB.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'NanumSquareOTFEB';
-  src: url('./fonts/nanumsquare/NanumSquareEB.ttf') format('truetype'), url('./fonts/nanumsquare/NanumSquare_acEB.ttf') format('truetype');
-} */
-
-/* 
-@font-face {
-  font-family: 'NanumSquareOTFR';
-  src: url('./fonts/nanumsquare/NanumSquareOTF_acR.otf') format('opentype');
-}
-@font-face {
-  font-family: 'NanumSquareOTFL';
-  src: url('./fonts/nanumsquare/NanumSquareOTF_acL.otf') format('opentype');
-}
-@font-face {
-  font-family: 'NanumSquareOTFB';
-  src: url('./fonts/nanumsquare/NanumSquareOTF_acB.otf') format('opentype');
-}
-@font-face {
-  font-family: 'NanumSquareOTFEB';
-  src: url('./fonts/nanumsquare/NanumSquareOTF_acEB.otf') format('opentype');
-} */
 
 @font-face {
   font-family: 'NanumSquareOTFR';
@@ -55,11 +33,13 @@
   src: url('./fonts/nanumsquare/NanumSquareB.otf') format('opentype');
 }
 
+
+
+
 @font-face {
   font-family: 'YunGothic320';
   src: url('./fonts/YunGothic/YunGothic320.ttf') format('truetype');
 }
-
 
 @font-face {
   font-family: 'NotoSansKR-Black';

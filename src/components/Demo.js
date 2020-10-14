@@ -163,7 +163,7 @@ function SystemChat({ text, scrollToBottom }) {
   return <React.Fragment>
     <div style={{ marginLeft: "24px", height: "32px", marginBottom: "4px" }}>
       <img style={{ height: "100%", verticalAlign: "middle", marginRight: "4px" }} src={require("../assets/Chat_BWAI_icon.svg")} alt="" />
-      <p style={{ display: "inline-block", margin: 0, fontFamily: "NanumSquareOTFB" }}>BWAI</p>
+      <p style={{ display: "inline-block", margin: 0, fontFamily: "NanumBarunGothicBold" }}>BWAI</p>
     </div>
     <div style={style_SystemChatWrapper} dangerouslySetInnerHTML={transForm}/>
   </React.Fragment>
@@ -209,7 +209,7 @@ const style_chat_input_wrapper = {
 const style_chat_input = {
   fontSize: "18px",
   width: "calc(100% - 8px)",
-  fontFamily: "NanumSquareOTFB",
+  fontFamily: "NanumBarunGothicBold",
   padding: "0 0 8px 8px",
   outline: "none",
   margin: 0,
@@ -219,7 +219,7 @@ const style_chat_input = {
 const style_chat_text_Wrapper = {
   display: "inlineBlock",
   maxWidth: "65%",
-  fontFamily: "NanumSquareOTFR",
+  fontFamily: "NanumBarunGothic",
   borderRadius: "8px",
   fontSize: "18px",
   lineHeight: "30px",
@@ -253,7 +253,7 @@ const style_chat_input_submit = {
 
 const style_chat_input_label_submit = {
   display: "inline-block",
-  fontFamily: "NanumSquareOTFB",
+  fontFamily: "NanumBarunGothicBold",
   fontSize: "18px",
   color: "#A300CB",
   width: "56px",
