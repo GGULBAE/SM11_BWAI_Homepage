@@ -79,7 +79,7 @@ function ChatRoom() {
         <input style={style_chat_input} type="text" value={inputText} onClick={inputClicked} onChange={inputChanged}></input>
         <input style={style_chat_input_submit} type="submit"></input>
       </form>
-      <div style={style_chat_input_label_submit}>
+      <div style={style_chat_input_label_submit} onClick={submit}>
         전송
       </div>
     </div>
