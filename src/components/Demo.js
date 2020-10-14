@@ -163,7 +163,7 @@ function SystemChat({ text, scrollToBottom }) {
   return <React.Fragment>
     <div style={{ marginLeft: "24px", height: "32px", marginBottom: "4px" }}>
       <img style={{ height: "100%", verticalAlign: "middle", marginRight: "4px" }} src={require("../assets/Chat_BWAI_icon.svg")} alt="" />
-      <p style={{ display: "inline-block", margin: 0 }}>BWAI</p>
+      <p style={{ display: "inline-block", margin: 0, fontFamily: "NanumSquareOTFB" }}>BWAI</p>
     </div>
     <div style={style_SystemChatWrapper} dangerouslySetInnerHTML={transForm}/>
   </React.Fragment>
