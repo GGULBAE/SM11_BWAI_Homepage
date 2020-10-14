@@ -1,7 +1,9 @@
 ## Intro
 
 BWAI is abbreviations of Bad Words Artificial Intelligence.
+
 BWAI is sponsored by 11st of SWMaestro.
+
 It's for final presentation and demo functions.
 
 ## How To Use
@@ -12,7 +14,7 @@ It's for final presentation and demo functions.
 ```
 
 ## Deployment
-[test.bwai.io][link_to_bwai_homepage]
+[bwai.io][link_to_bwai_homepage]
 
 # Contributors
 [GGULBAE][link_to_GGULBAE]
@@ -21,4 +23,4 @@ It's for final presentation and demo functions.
 ### COPYRIGHT 2020 ALL RIGHTS RESERVED BY BWAI
 
 [link_to_GGULBAE]: https://github.com/GGULBAE "Go GGULBAE GIT"
-[link_to_bwai_homepage]: http://test.bwai.io "Go BWAI Homepage"
+[link_to_bwai_homepage]: http://bwai.io "Go BWAI Homepage"
