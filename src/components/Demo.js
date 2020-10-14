@@ -1,12 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Axios from 'axios';
 
 const apiServer = "http://3.35.200.169";
-// const userToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDI1ODc1MDEsIm5iZiI6MTYwMjU4NzUwMSwianRpIjoiODBmY2FmMmQtYTc1MC00MTlmLWJmNGYtMzczZTkzYWNjNTY1IiwiaWRlbnRpdHkiOiJEZW1vIiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIn0.TRTV1s-BB_BQ6hgwYEAFsvVrqEPMUEtfnnJ2uKXw_Xo";
-// const apiToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE2MDI1ODgxODUsIm5iZiI6MTYwMjU4ODE4NSwianRpIjoiZTJhZjYzYzUtNmQyZC00YzU2LTg5ZDQtYjA2ZDExNmQ0NGZjIiwiaWRlbnRpdHkiOiJEZW1vMjAyMC0xMC0xMyAxMToyMzowNS42NjI5MjQiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MifQ.07RRU0Luv13FsZieElr7EElNXs8Gwo3L5_FShVi_jSI";
-// const config = {
-//   headers: { Authorization: `Bearer ${apiToken}` }
-// };
 
 export default function Demo(props) {
   const style_Navigation_Shadow = {
@@ -48,14 +43,24 @@ function ChatRoom() {
   const [inputText, setInputText] = useState(defaultText);
   const [changed, setChanged] = useState(false);
   const [prevTexts, setPrevTexts] = useState([]);
+  const ref_chatWrapper = useRef(null);
 
-  return <React.Fragment>
-    <div style={style_chat_wrapper}>
+  const scrollToBottom = () => {
+    var tar = ref_chatWrapper.current;
+    var height_tar = tar.scrollHeight;
+
+    tar.scrollTo(0, height_tar);
+    // chat_Bottom.current.scrollIntoView({ behavior: "smooth"});
+    // ref_chatWrapper.current.scrollTo(0, temp1.scrollHeight)
+  }
+
+  return <div style={style_border}>
+    <div style={style_chat_wrapper} ref={ref_chatWrapper}>
       {
         prevTexts.map((data, index) => {
           if (data.direction === "left") {
             return <React.Fragment key={index}>
-              <SystemChat text={data.text} />
+              <SystemChat text={data.text} scrollToBottom={scrollToBottom}/>
               <ClearDiv />
             </React.Fragment>
           }
@@ -69,12 +74,15 @@ function ChatRoom() {
       }
     </div>
     <div style={style_chat_input_wrapper}>
-      <form onSubmit={submit}>
+      <form style={{width: "calc(100% - 64px)", display: "inline-block"}} onSubmit={submit}>
         <input style={style_chat_input} type="text" value={inputText} onClick={inputClicked} onChange={inputChanged}></input>
         <input style={style_chat_input_submit} type="submit"></input>
       </form>
+      <div style={style_chat_input_label_submit}>
+        전송
+      </div>
     </div>
-  </React.Fragment>
+  </div>
 
   function inputChanged(e) {
     const nextValue = e.target.value;
@@ -117,10 +125,13 @@ function ChatRoom() {
   }
 }
 
-function SystemChat({ text }) {
-  const [transForm, setTransForm] = useState(text);
+function SystemChat({ text, scrollToBottom }) {
+  const default_Loading = "Loading...";
+  const [transForm, setTransForm] = useState(default_Loading);
 
   useEffect(() => {
+    if (transForm !== default_Loading)
+      return
     var url = `${apiServer}/bwai/demo/label`;
     var data = {
       'sentence': text
@@ -132,21 +143,22 @@ function SystemChat({ text }) {
         setTransForm("BWAI API의 결과 <문장에는 욕이 있습니다.>")
       else
         setTransForm("BWAI API의 결과 <문장에는 욕이 없습니다.>")
+      
+      scrollToBottom();
     })
 
   })
 
-  // console.log(result);
 
   return <React.Fragment>
-    <div style={{ marginLeft: "24px", verticalAlign: "top", height: "32px", marginBottom: "8px" }}>
+    {/* <div style={{ marginLeft: "24px", verticalAlign: "top", height: "32px", marginBottom: "8px" }}>
       <div style={{ width: "32px", height: "32px", display: "inline-block" }}>
         <img style={{ width: "100%", height: "100%" }} src={require("../assets/Chat_BWAI_icon.svg")} alt="" />
       </div>
       <div style={{ display: "inline-block", height: "32px", verticalAlign: "middle" }}>
         <span style={{ fontSize: "16px", lineHeight: "32px" }}>BWAI</span>
       </div>
-    </div>
+    </div> */}
 
     <div style={style_SystemChatWrapper}>
       <p style={style_chat_text}>{transForm}</p>
@@ -169,8 +181,15 @@ function ClearDiv() {
   return <div style={clearStyle}></div>
 }
 
+const style_border = {
+  paddingBottom: "16px",
+  // border: "1px solid #707070",
+  boxShadow: "0px 0px 20px 5px rgba(0, 0, 0, 0.2)"
+}
+
 const style_chat_wrapper = {
-  // border: "1px solid",
+  scrollBehavior: "smooth",
+  borderBottom: "0px",
   paddingTop: "16px",
   height: "calc(100vh - 300px)",
   position: "relative",
@@ -178,12 +197,14 @@ const style_chat_wrapper = {
 }
 
 const style_chat_input_wrapper = {
+  width: "calc(100% - 48px)",
+  margin: "0 24px",
   borderBottom: "1px solid rgba(0, 0, 0, 0.5)",
 }
 
 const style_chat_input = {
   fontSize: "18px",
-  width: "100%",
+  width: "calc(100% - 8px)",
   fontFamily: "NanumSquareOTFB",
   padding: "0 0 8px 8px",
   outline: "none",
@@ -222,4 +243,14 @@ const style_SystemChatWrapper = {
 
 const style_chat_input_submit = {
   display: "none"
+}
+
+const style_chat_input_label_submit = {
+  display: "inline-block",
+  fontFamily: "NanumSquareOTFB",
+  fontSize: "18px",
+  color: "#A300CB",
+  width: "56px",
+  marginRight: "8px",
+  textAlign: "right"
 }
