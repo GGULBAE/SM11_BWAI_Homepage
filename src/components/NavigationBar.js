@@ -59,14 +59,16 @@ const style_NavigationWrapper = {
 
 const style_NavigationWrapper_main = {
   ...style_NavigationWrapper,
-  height: "auto",
+  // height: "96",
   backgroundColor: "none"
 }
 
 const style_NavigationLogo = {
   position: "absolute",
-  top: absolute_top_value,
+  // top: absolute_top_value,
+  top: "50%",
   left: left_right_value,
+  transform: "translate(0, -50%)",
   cursor: "pointer"
 }
 
