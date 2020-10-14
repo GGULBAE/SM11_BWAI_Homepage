@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Axios from 'axios';
+import './Demo.css';
 
 const apiServer = "http://3.35.200.169";
 
@@ -60,7 +61,7 @@ function ChatRoom() {
         prevTexts.map((data, index) => {
           if (data.direction === "left") {
             return <React.Fragment key={index}>
-              <SystemChat text={data.text} scrollToBottom={scrollToBottom}/>
+              <SystemChat text={data.text} scrollToBottom={scrollToBottom} />
               <ClearDiv />
             </React.Fragment>
           }
@@ -74,7 +75,7 @@ function ChatRoom() {
       }
     </div>
     <div style={style_chat_input_wrapper}>
-      <form style={{width: "calc(100% - 64px)", display: "inline-block"}} onSubmit={submit}>
+      <form style={{ width: "calc(100% - 64px)", display: "inline-block" }} onSubmit={submit}>
         <input style={style_chat_input} type="text" value={inputText} onClick={inputClicked} onChange={inputChanged}></input>
         <input style={style_chat_input_submit} type="submit"></input>
       </form>
@@ -127,36 +128,44 @@ function ChatRoom() {
 
 function SystemChat({ text, scrollToBottom }) {
   const default_Loading = "Loading...";
-  const [transForm, setTransForm] = useState(default_Loading);
+  const [transForm, setTransForm] = useState({ __html: default_Loading });
 
   useEffect(() => {
-    if (transForm !== default_Loading)
+    if (transForm.__html !== default_Loading)
       return
+
     var url = `${apiServer}/bwai/demo/label`;
     var data = {
       'sentence': text
     }
 
     Axios.post(url, data)
-    .then((res) => {
-      if (res.data.data)
-        setTransForm("BWAI API의 결과 <문장에는 욕이 있습니다.>")
-      else
-        setTransForm("BWAI API의 결과 <문장에는 욕이 없습니다.>")
-      
-      scrollToBottom();
-    })
+      .then((res) => {
+        if (res.data.data)
+          setTransForm({
+            __html: `
+        <p class="SystemChatTitle">BWAI API의 결과 <문장에는 욕이 있습니다></p>
+        <p class="SystemChatContents">
+          blank <span class="highlight">${text}</span> blank
+        </p>
+        `})
+        else
+          setTransForm({
+            __html: `
+        <p class="SystemChatTitle">BWAI API의 결과 <문장에는 욕이 없습니다></p>
+        `})
+
+        scrollToBottom();
+      })
   })
 
 
   return <React.Fragment>
-    <div style={{marginLeft: "24px", height: "32px", marginBottom: "4px"}}>
-      <img style={{height: "100%", verticalAlign:"middle", marginRight: "4px"}} src={require("../assets/Chat_BWAI_icon.svg")} alt="" />
-      <p style={{display: "inline-block", margin: 0}}>BWAI</p>
+    <div style={{ marginLeft: "24px", height: "32px", marginBottom: "4px" }}>
+      <img style={{ height: "100%", verticalAlign: "middle", marginRight: "4px" }} src={require("../assets/Chat_BWAI_icon.svg")} alt="" />
+      <p style={{ display: "inline-block", margin: 0 }}>BWAI</p>
     </div>
-    <div style={style_SystemChatWrapper}>
-      <p style={style_chat_text}>{transForm}</p>
-    </div>
+    <div style={style_SystemChatWrapper} dangerouslySetInnerHTML={transForm}/>
   </React.Fragment>
 }
 
@@ -208,7 +217,7 @@ const style_chat_input = {
 
 const style_chat_text_Wrapper = {
   display: "inlineBlock",
-  maxWidth: "460px",
+  maxWidth: "65%",
   fontFamily: "NanumSquareOTFR",
   borderRadius: "8px",
   fontSize: "18px",
@@ -233,6 +242,8 @@ const style_SystemChatWrapper = {
   float: "left",
   marginLeft: "24px",
   border: "1px solid #A300CB",
+  padding: "8px",
+  wordBreak: "break-all"
 }
 
 const style_chat_input_submit = {
