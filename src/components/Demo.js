@@ -196,7 +196,8 @@ const style_chat_wrapper = {
   paddingTop: "16px",
   height: "calc(100vh - 300px)",
   position: "relative",
-  overflow: "scroll"
+  overflow: "scroll",
+  overflowX: "hidden"
 }
 
 const style_chat_input_wrapper = {
