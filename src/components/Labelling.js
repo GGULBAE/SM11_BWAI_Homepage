@@ -9,7 +9,8 @@ function getRandomInt(min, max) {
 }
 
 const pages = getRandomInt(1, 1000);
-const apiServer = "http://3.35.200.169";
+
+const apiServer = "http://api.bwai.io";
 
 export default function Labelling(props) {
     const [posts, setPosts] = useState(0);

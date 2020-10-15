@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import Axios from 'axios';
 import './Demo.css';
 
-const apiServer = "http://3.35.200.169";
+const apiServer = "http://api.bwai.io";
 
 export default function Demo(props) {
   const style_Navigation_Shadow = {
