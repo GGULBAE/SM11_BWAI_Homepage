@@ -244,9 +244,9 @@ output" class="cls-17" transform="translate(1422 731)"><tspan x="-73.312" y="0">
     <rect id="사각형_61" data-name="사각형 61" class="cls-15" width="291" height="291" rx="20" transform="translate(783 1167)"/>
     <text id="Attention_Module" data-name="Attention
 Module" class="cls-10" transform="translate(928 1307)"><tspan x="-71.488" y="0">Attention</tspan><tspan x="-56.912" y="44">Module</tspan></text>
-    <text id="K" class="cls-19" transform="translate(950.191 1089)"><tspan x="-10.608" y="0">K</tspan></text>
-    <text id="Q" class="cls-19" transform="translate(897.191 1089)"><tspan x="-12.064" y="0">Q</tspan></text>
-    <text id="V" class="cls-19" transform="translate(1091.191 1089)"><tspan x="-9.504" y="0">V</tspan></text>
+    <text id="K" class="cls-19" transform="translate(950.191 1089)"><tspan x="-10.608" y="0">V</tspan></text>
+    <text id="Q" class="cls-19" transform="translate(897.191 1089)"><tspan x="-12.064" y="0">K</tspan></text>
+    <text id="V" class="cls-19" transform="translate(1091.191 1089)"><tspan x="-9.504" y="0">Q</tspan></text>
     <path id="다각형_2" data-name="다각형 2" class="cls-20" d="M7.5,0,15,11H0Z" transform="matrix(-0.899, 0.438, -0.438, -0.899, 894.818, 1058.509)"/>
     <path id="다각형_9" data-name="다각형 9" class="cls-20" d="M7.5,0,15,11H0Z" transform="translate(958.592 1057.485) rotate(166)"/>
     <path id="다각형_11" data-name="다각형 11" class="cls-20" d="M7.5,0,15,11H0Z" transform="matrix(-0.829, 0.559, -0.559, -0.829, 942.877, 1056.512)"/>
