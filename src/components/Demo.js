@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import Axios from 'axios';
 import './Demo.css';
 
+import NavigationBar from './NavigationBar.js';
+
 const apiServer = "http://api.bwai.io";
 
 export default function Demo(props) {
@@ -14,6 +16,7 @@ export default function Demo(props) {
   }
 
   return <React.Fragment>
+    <NavigationBar/>
     <div style={style_Navigation_Shadow}></div>
     <div style={style_Demo_Wrapper}>
       <div style={{ width: "100%" }}>

@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactFullpage from '@fullpage/react-fullpage';
+import NavigationBar from '../components/NavigationBar.js';
+
 import './Home.css';
 var automatic_scroll;
 
@@ -91,6 +93,7 @@ const Fullpage = () => (
 
 export default function Home(props) {
     return <React.Fragment>
+        <NavigationBar/>
         <Fullpage/>
     </React.Fragment>
 }

@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
-
+import NavigationBar from './NavigationBar.js';
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -32,6 +32,7 @@ export default function Labelling(props) {
     }, [posts]);
 
     return <React.Fragment>
+        <NavigationBar/>
         <div style={style_Navigation_Shadow}></div>
         <div style={style_Labelling_Wrapper}>
             

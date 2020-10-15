@@ -1,6 +1,6 @@
 import React from 'react';
 
-const bwai_dashboard = "http://dashboard.bwai.io";
+const bwai_dashboard = "/dashboard";
 
 function linkTo(e) {
   const target = e.target.getAttribute("linkto");
