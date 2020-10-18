@@ -14,7 +14,6 @@ export default function MainFrame() {
         backgroundColor: "#F4F6F8"
     }
 
-    console.log(view);
     return <div style={style_MainFrame}>
         <NavigationWrapper setView={setView}/>
         {
