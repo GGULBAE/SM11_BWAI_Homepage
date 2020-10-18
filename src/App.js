@@ -24,7 +24,7 @@ function App() {
           <Route exact path="/price" component={Price}/>
           <Route exact path="/demo" component={Demo}/>
           <Route exact path="/labelling" component={Labelling}/>
-          <Route exact path="/dashboard" component={DashBoard}/>
+          <Route path="/dashboard" component={DashBoard}/>
           {/* <Route exact path="/test" component={test}/> */}
           <Route path="/" component={Home}/>
         </Switch>
