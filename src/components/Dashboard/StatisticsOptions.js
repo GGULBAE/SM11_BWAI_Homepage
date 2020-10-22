@@ -1,16 +1,17 @@
 import React from 'react';
 import Select from 'react-select'
 
-export default function StatisticsOptions({setPeriod}) {
+export default function StatisticsOptions({setSetting}) {
     const options = [
-        { value: 7, label: 'past 1 week' },
-        { value: 15, label: 'past 2 weeks' },
+        { value: 1, label: 'Recent' },
+        { value: 2, label: 'Monthly' },
+        { value: 3, label: 'Yearly' },
         // { value: 30, label: 'past 1 month' },
         // { value: 90, label: 'past 3 months' }
     ]
 
     function onChange(e) {
-        setPeriod(e.value)
+        setSetting(e.value)
     }
 
     return <div style={style_StatisticsOptions}>

@@ -18,18 +18,33 @@ function UserInfo() {
     var myKey = window.sessionStorage.getItem("myAPIKey");
     const config = {headers: { Authorization: `Bearer ${myKey}` }};
     const url = `${window.server}/api/auth/info`;
+    const [name, setName] = useState("loading")
 
     useEffect(() => {
         Axios.get(url, config)
         .then((res) => {
             console.log(res);
+            var result = res.data.result;
+            var user_id = result.user_id;
+
+            setName(user_id);
         })
     })
-    return <div>
-        UserInfo
+    return <div style={{padding: "8px 0 16px 0", textAlign: "center", borderBottom: "1px solid rgba(0, 0, 0, 0.12)"}}>
+        <Profile/>
+        <p style={{fontSize: "16px", margin: "0", lineHeight: "1.334", fontWeight: "bold"}}>{name} 님</p>
+        <p style={{fontSize: "16px", margin: "0", lineHeight: "1.334", color: "gray"}}>정회원</p>
     </div>
 }
 
+function Profile() {
+    const style_wrapper = {
+        width: "64px", height: "64px", borderRadius: "50px", margin: "0 auto", background: "gray"
+    }
+    return <div style={style_wrapper}>
+        <img style={{width: "100%", height: "100%"}} src={require("../../assets/Main_B.svg")} alt=""></img>
+    </div>
+}
 function Navigation({setView}) {
     const datas = ["Dashboard", "Settings", "Account", "Logout"];
     const [highlight, setHighlight] = useState("Dashboard");

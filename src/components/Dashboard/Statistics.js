@@ -1,29 +1,65 @@
 import React, { useEffect, useState } from 'react';
 import StatisticsOptions from './StatisticsOptions.js';
 import Graph from './Graph.js';
+import Axios from 'axios';
 
-const defaultPeriod = 7
+const defaultSettings = 1
+const apiServer = "http://api.bwai.io";
+// 1: recent
+// 2: monthly
+// 3: yearly
 
 export default function Statistics() {
-    const [period, setPeriod] = useState(defaultPeriod);
-    const [datas, setDatas] = useState(getDatas(defaultPeriod));
-    const [labels, setLabels] = useState(getLabels(defaultPeriod));
+    const [setting, setSetting] = useState(defaultSettings);
+    const [datas, setDatas] = useState(getDatas(defaultSettings));
+    const [labels, setLabels] = useState(getLabels(defaultSettings));
 
     useEffect(() => {
         
     })
 
     useEffect(() => {
-        setLabels(getLabels(period));
-        setDatas(getDatas(period));
-    }, [period])
+        if (setting === 1) {
+            getRecentLabels();
+            getRecentData();
+        } else if (setting === 2) {
+            getMonthlyLabels();
+            getMonthlyData();
+        } else if (setting === 3) {
+            getYearlyLabels();
+            getYearlyData();
+        } else {
+            throw new Error("SETTING INVALID");
+        }
+    }, [setting])
 
     return <div style={style_ChartWrapper}>
-        <StatisticsOptions setPeriod={setPeriod}/>
+        <StatisticsOptions setSetting={setSetting}/>
         <div style={style_GraphWrapper}>
             <Graph datas={datas} labels={labels}/>
         </div>
     </div>
+
+    function getRecentLabels() {
+        const apiKey = window.sessionStorage.getItem("myAPIKey");
+        
+        var today = new Date();
+        today.setTime(today.getTime() - (10 * 24 * 60 * 60 * 1000));
+        
+        var year = today.getFullYear();
+        var month = today.getMonth() + 1;
+        var date = today.getDate();
+        console.log(today);
+        const url = `${apiServer}/api/bwai/v1/dashboard/year/${year}/month/${month}/day/${date}`;
+        const config = {headers: { Authorization: `Bearer ${apiKey}` }};
+        
+        Axios.get(url, config)
+        .then((res) => {
+            console.log(res);
+        });
+        // console.log(result);
+        // return result;
+    }
 }
 
 const style_ChartWrapper = {
@@ -84,3 +120,10 @@ function getDatas(period) {
         Price: Price
     }
 }
+
+
+function getRecentData() {}
+function getMonthlyLabels() {}
+function getMonthlyData() {}
+function getYearlyLabels() {}
+function getYearlyData() {}
