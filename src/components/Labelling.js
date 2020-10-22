@@ -17,12 +17,13 @@ export default function Labelling(props) {
 
     useEffect(() => {
         if (!posts) {
-            var url = `${apiServer}/api/v3/get/posts/${pages}/0/30`;
+            // var url = `${apiServer}/api/v3/get/posts/${pages}/0/30`;
+            var url = `${apiServer}/api/bwai/v1/posts/${pages}/0/30`;
             Axios.get(url)
                 .then((res) => {
                     console.log(res);
-                    if (res.data.data.length)
-                        setPosts(res.data.data);
+                    if (res.data.result.length)
+                        setPosts(res.data.result);
                     else {
                         alert("로드 실패. reload!");
                         window.location.reload();
@@ -135,7 +136,7 @@ class POST extends React.Component {
 
     submit = () => {
         var doc_id = this.props.postData._id;
-        var url = `${apiServer}/api/v3/set/label`;
+        var url = `${apiServer}/api/bwai/v1/label`;
 
         var form = {
             "document_id": doc_id,
@@ -143,7 +144,7 @@ class POST extends React.Component {
         }
 
         console.log(form);
-        Axios.post(url, form)
+        Axios.patch(url, form)
         .then((res) => {
             if (this.props.success)
                 this.props.success();

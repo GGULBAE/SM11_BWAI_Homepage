@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import Axios from 'axios';
 // import { Route, Link } from 'react-router-dom';
 
 export default function NavigationWrapper({setView}) {
@@ -14,6 +15,16 @@ export default function NavigationWrapper({setView}) {
 }
 
 function UserInfo() {
+    var myKey = window.sessionStorage.getItem("myAPIKey");
+    const config = {headers: { Authorization: `Bearer ${myKey}` }};
+    const url = `${window.server}/api/auth/info`;
+
+    useEffect(() => {
+        Axios.get(url, config)
+        .then((res) => {
+            console.log(res);
+        })
+    })
     return <div>
         UserInfo
     </div>

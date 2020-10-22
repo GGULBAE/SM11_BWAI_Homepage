@@ -5,8 +5,8 @@ export default function StatisticsOptions({setPeriod}) {
     const options = [
         { value: 7, label: 'past 1 week' },
         { value: 15, label: 'past 2 weeks' },
-        { value: 30, label: 'past 1 month' },
-        { value: 90, label: 'past 3 months' }
+        // { value: 30, label: 'past 1 month' },
+        // { value: 90, label: 'past 3 months' }
     ]
 
     function onChange(e) {
@@ -14,7 +14,7 @@ export default function StatisticsOptions({setPeriod}) {
     }
 
     return <div style={style_StatisticsOptions}>
-        <p style={style_StatisticsOptions_Text}>API Usage</p>
+        <p style={style_StatisticsOptions_Text}>API 사용량</p>
         <div style={style_StatisticsOptions_Select}>
             <Select 
                 options={options} 

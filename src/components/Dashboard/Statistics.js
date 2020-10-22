@@ -10,7 +10,7 @@ export default function Statistics() {
     const [labels, setLabels] = useState(getLabels(defaultPeriod));
 
     useEffect(() => {
-
+        
     })
 
     useEffect(() => {

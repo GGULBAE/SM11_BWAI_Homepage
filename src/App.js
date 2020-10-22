@@ -15,6 +15,7 @@ import DashBoard from './components/DashBoard.js';
 var hist = createBrowserHistory();
 
 function App() {
+  window.server = "http://api.bwai.io";
   return (
     <React.Fragment>
       <Router history={hist}>

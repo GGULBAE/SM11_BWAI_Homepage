@@ -30,17 +30,6 @@ export default function Demo(props) {
   </React.Fragment>
 }
 
-// const defaultPrevTexts = [
-//   {
-//     direction: "right",
-//     text: "사람한번 존나게 길게 적어 보겠습니다 길게 길게 길게 사람한번 사람한번 사람한번 사람한번 사람한번 사람한번 "
-//   },
-//   {
-//     direction: "left",
-//     text: "시스템"
-//   }
-// ]
-
 const defaultText = "텍스트를 입력하세요."
 
 function ChatRoom() {
@@ -53,9 +42,11 @@ function ChatRoom() {
     var tar = ref_chatWrapper.current;
     var height_tar = tar.scrollHeight;
 
+    console.group("SCROLLTOBOTTOM");
+    console.log(tar, height_tar);
+    console.groupEnd("SCROLLTOBOTTOMEND");
+
     tar.scrollTo(0, height_tar);
-    // chat_Bottom.current.scrollIntoView({ behavior: "smooth"});
-    // ref_chatWrapper.current.scrollTo(0, temp1.scrollHeight)
   }
 
   return <div style={style_border}>
@@ -129,36 +120,75 @@ function ChatRoom() {
   }
 }
 
+const thread_hold = 0.8;
+// var word_thread_hold = 0.2;
+
 function SystemChat({ text, scrollToBottom }) {
   const default_Loading = "Loading...";
   const [transForm, setTransForm] = useState({ __html: default_Loading });
 
   useEffect(() => {
     if (transForm.__html !== default_Loading)
+      scrollToBottom();
+      // eslint-disable-next-line 
+  }, [transForm]);
+
+  useEffect(() => {
+    if (transForm.__html !== default_Loading)
       return
 
-    var url = `${apiServer}/bwai/demo/label`;
+    var url = `${apiServer}/api/bwai/v1/probability/demo`;
     var data = {
-      'sentence': text
+      'text': text
     }
 
     Axios.post(url, data)
       .then((res) => {
-        if (res.data.data)
-          setTransForm({
-            __html: `
-        <p class="SystemChatTitle">BWAI API의 결과 <문장에는 욕이 있습니다></p>
-        <p class="SystemChatContents">
-          blank <span class="highlight">${text}</span> blank
-        </p>
-        `})
-        else
-          setTransForm({
-            __html: `
-        <p class="SystemChatTitle">BWAI API의 결과 <문장에는 욕이 없습니다></p>
-        `})
+        console.log(res);
+        var result = res.data.result;
+        var is_good = result.probability.bad <= thread_hold;
 
-        scrollToBottom();
+        if (is_good) {
+          setTransForm({
+              __html: `<p class="SystemChatTitle">BWAI API의 결과 <문장에는 욕이 없습니다></p>`})
+          return;
+        }
+
+        var prob_per_token = result.prob_per_token;
+        var tokens = result.tokens;
+
+        tokens = tokens.map((data) => data.replace("##", ""));
+
+        console.log(prob_per_token);
+        console.log(tokens);
+        
+        var string = "";
+        var last_index = 0;
+        var word_thread_hold = 1 / tokens.length;
+
+        for (var i = 0; i < tokens.length; i++) {
+          var index = text.indexOf(tokens[i]);
+
+          string += text.slice(last_index, index);
+          if (prob_per_token[i] >= word_thread_hold) {
+            string += `<span class="highlight">${tokens[i]}</span>`
+          } else {
+            string += tokens[i];
+          }
+          
+          last_index = index + tokens[i].length;
+        }
+
+        setTransForm({
+          __html: `
+            <p class="SystemChatTitle">BWAI API의 결과 <문장에는 욕이 있습니다></p>
+            <p class="SystemChatContents">
+            ${string}
+            </p>
+          `
+        })
+
+        // scrollToBottom();
       })
   })
 
