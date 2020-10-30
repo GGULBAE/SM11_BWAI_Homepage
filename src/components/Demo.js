@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import NavigationBar from './NavigationBar.js';
-import ChatRoom from './ChatRoom.js';
+import ChatRoom from './ChatRoom/ChatRoom.js';
 
 import './Demo.css';
 

@@ -74,7 +74,7 @@ function SystemChat({ text, scrollToBottom, possibility }) {
 
   return <React.Fragment>
     <SystemInfo>
-      <SystemFace src={require("../assets/Chat_BWAI_icon.svg")} alt="" />
+      <SystemFace src={require("../../assets/Chat_BWAI_icon.svg")} alt="" />
       <SystemName>BWAI</SystemName>
     </SystemInfo>
     <ChatSystemTextWrapper dangerouslySetInnerHTML={transForm} />
