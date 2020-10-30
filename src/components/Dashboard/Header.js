@@ -1,29 +1,38 @@
 import React from 'react';
+import styled from 'styled-components';
 
 export default function Header() {
-    function goDashboard(e) {
-        e.preventDefault();
+  function goDashboard(e) {
+    e.preventDefault();
 
-        window.location.href = "/dashboard";
-    }
+    window.location.reload();
+  }
 
-    return <div style={style_Header}>
-        <img style={style_Logo} src={require("../../assets/Main_B.svg")} onClick={goDashboard}alt=""/>
-    </div>
+  return <HeaderWrapper>
+    <Logo src={require("../../assets/Main_B.svg")} onClick={goDashboard} alt="" />
+    <Title onClick={goDashboard}>WAI DASHBOARD</Title>
+  </HeaderWrapper>
 }
 
-const style_Header = {
-    color: "#fff",
-    height: "64px",
-    padding: "0 24px",
-    backgroundColor: "#3f51b5",
-    position: "relative"
-}
+const HeaderWrapper = styled.div`
+  color: #FFF;
+  height: 64px;
+  padding: 0 24px;
+  background-color: #3F51B5;
+  position: relative;
+`
 
-const style_Logo = {
-    height: "50%",
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    cursor: "pointer"
-}
+const Logo = styled.img`
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+`
+
+const Title = styled.p`
+  padding: 26px 0 0 26px;
+  margin: 0;
+  font-size: 24px;
+  cursor: pointer;
+`

@@ -9,13 +9,13 @@ import './Demo.css';
 export default function Demo(props) {
 
   return <React.Fragment>
-    <NavigationBar/>
+    <NavigationBar />
     <NavigationShadow></NavigationShadow>
     <DemoWrapper>
       <DemoTitleWrapper>
         <DemoTitle src={require("../assets/DemoTitle.svg")} type="image/svg+xml"></DemoTitle>
       </DemoTitleWrapper>
-      <ChatRoom/>
+      <ChatRoom />
     </DemoWrapper>
     <FooterWrapper>
       <Footer src={require("../assets/Footer.svg")} type="image/svg+xml"></Footer>
