@@ -36,6 +36,6 @@ export default function DashBoard() {
 
   return <React.Fragment>
     <Header />
-    {myKey ? <MainFrame /> : null}
+    {myKey ? <MainFrame apiKey={myKey}/> : null}
   </React.Fragment>
 }

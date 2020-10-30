@@ -6,9 +6,8 @@ import getConfig from '../getConfig.js';
 
 const apiServer = process.env.REACT_APP_API_SERVER;
 
-export default function UserInfo() {
-  const myKey = window.sessionStorage.getItem("myAPIKey");
-  const config = getConfig(myKey);
+export default function UserInfo(apiKey) {
+  const config = getConfig(apiKey);
 
   const url = `${apiServer}/api/auth/info`;
   const [name, setName] = useState("loading")
