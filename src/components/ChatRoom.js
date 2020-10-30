@@ -1,9 +1,7 @@
 import React, { useRef, useState } from 'react';
-// import { SystemChat, UserChat } from './ChatMessage.js';
+import styled from 'styled-components';
 
 import ChatMessage from './ChatMessage.js';
-
-import styled from 'styled-components';
 
 const defaultText = "텍스트를 입력하세요."
 

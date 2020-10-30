@@ -15,7 +15,6 @@ import DashBoard from './components/DashBoard.js';
 var hist = createBrowserHistory();
 
 function App() {
-  window.server = "http://api.bwai.io";
   return (
     <React.Fragment>
       <Router history={hist}>
@@ -26,7 +25,6 @@ function App() {
           <Route exact path="/demo" component={Demo}/>
           <Route exact path="/labelling" component={Labelling}/>
           <Route path="/dashboard" component={DashBoard}/>
-          {/* <Route exact path="/test" component={test}/> */}
           <Route path="/" component={Home}/>
         </Switch>
       </Router>

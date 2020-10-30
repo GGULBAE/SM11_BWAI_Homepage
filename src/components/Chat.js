@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import styled from 'styled-components';
 
-const apiServer = "http://api.bwai.io";
+const apiServer = process.env.REACT_APP_API_SERVER;
 const default_Loading = "Loading...";
 const thread_hold = 0.8; // bad words contains or not
 
