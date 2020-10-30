@@ -5,7 +5,6 @@
 #MainB, #MainRemains {
     position: absolute;
     bottom: calc(50% - (40.7vw / 6.318170239689726 / 2));
-
     /* 
         Remains Ratio
 

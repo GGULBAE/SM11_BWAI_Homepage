@@ -15,7 +15,6 @@
   src: url('./fonts/NanumBarunGothic/NanumBarunGothicUltraLight.otf') format('opentype');
 }
 
-
 @font-face {
   font-family: 'NanumSquareOTFR';
   src: url('./fonts/nanumsquare/NanumSquareR.otf') format('opentype');
@@ -34,23 +33,20 @@
 }
 
 
-
-
 @font-face {
   font-family: 'YunGothic320';
   src: url('./fonts/YunGothic/YunGothic320.ttf') format('truetype');
 }
 
+
 @font-face {
   font-family: 'NotoSansKR-Black';
   src: url('./fonts/Noto_Sans_KR/NotoSansKR-Black.otf') format('opentype');
 }
-
 @font-face {
   font-family: 'NotoSansKR-Bold';
   src: local('NotoSansKR-Bold'), url('./fonts/Noto_Sans_KR/NotoSansKR-Bold.otf') format('opentype');
 }
-
 @font-face {
   font-family: 'NotoSansKR-Light';
   src: url('./fonts/Noto_Sans_KR/NotoSansKR-Light.otf') format('opentype');
@@ -71,7 +67,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  /* font-family: 'NotoSansKR-Bold'; */
 }
 
 body {

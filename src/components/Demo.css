@@ -9,7 +9,6 @@
 }
 
 .SystemChatContents > .highlight {
-    /* color: red; */
     animation: colorChange 1s ease-in-out forwards;
     -webkit-animation: colorChange 1s ease-in-out forwards;
 }
