@@ -13,9 +13,11 @@ export default function Statistics() {
     const [setting, setSetting] = useState(defaultSettings);
     const [datas, setDatas] = useState(getDatas(defaultSettings));
     const [labels, setLabels] = useState(getLabels(defaultSettings));
-
+    
+    // eslint-disable-next-line
     useEffect(() => {
-        
+        console.log(setDatas);
+        console.log(setLabels);
     })
 
     useEffect(() => {
