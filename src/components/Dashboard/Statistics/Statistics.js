@@ -39,4 +39,3 @@ const StatisticsWrapper = styled.div`
 `
 
 const ChartWrapper = styled.div``;
-// const Chart = styled.div``;
