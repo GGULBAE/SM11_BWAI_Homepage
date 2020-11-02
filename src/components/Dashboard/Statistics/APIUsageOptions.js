@@ -14,7 +14,7 @@ export default function StatisticsOptions({ setSetting }) {
   }
 
   return <OptionsWrapper>
-    <Title>API 사용량</Title>
+    <Title>총 API 사용량</Title>
     <SelectWrapper>
       <Select
         options={options}

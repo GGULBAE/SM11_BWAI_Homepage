@@ -1,45 +1,32 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-import StatisticsOptions from './StatisticsOptions.js';
-import Chart from './Chart.js';
+import TodayUsages from './TodayUsages.js';
+// import TodayBilling from './TodayBilling.js';
+import APIUsages from './APIUsages.js';
 
-import getChartData from './getChartData.js';
-import convertChartData from './convertChartData.js';
-
+// 당일 API 사용량 + 총 Billing 요금
 export default function Statistics({ apiKey }) {
-  const [setting, setSetting] = useState(1); // Default: This Month
-  const [data, setData] = useState(null);
-  const [chartData, setChartData] = useState([]);
-
-  useEffect(() => {
-    if (data)
-      convertChartData(data, setting, setChartData);
-    // eslint-disable-next-line
-  }, [data])
-
-  useEffect(() => {
-    getChartData(apiKey, setting, setData);
-  }, [apiKey, setting]);
-
   return <StatisticsWrapper>
-    <StatisticsOptions setSetting={setSetting} />
-    <ChartWrapper>
-      <Chart data={chartData} />
-    </ChartWrapper>
+    <TodayUsagesWrapper>
+      <TodayUsages/>
+      <TodayUsages/>
+      <TodayUsages/>
+      <TodayUsages/>
+    </TodayUsagesWrapper>
+    <APIUsages apiKey={apiKey}></APIUsages>
   </StatisticsWrapper>
 }
 
-const StatisticsWrapper = styled.div`
-  margin: 24px;
-  border-radius: 5px 5px;
-  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
-  background-color: #FFF;
-  overflow-x: scroll;
-  height: calc(300px + 71px + 24px + 24px);
-  
-`
+const StatisticsWrapper = styled.div``
+const TodayUsagesWrapper = styled.div`
+  margin: 24px 24px 0 24px;
+  width: calc(100% - 48px);
+  display: grid;
+  grid-template-columns: repeat(4, calc(25%));
+  height: calc(136px + 24px);
 
-const ChartWrapper = styled.div`
-  margin: 24px;
-`;
+  div:last-child {
+    margin-right: 0;
+  }
+`
