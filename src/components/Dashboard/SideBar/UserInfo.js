@@ -12,7 +12,7 @@ export default function UserInfo({ apiKey }) {
 
   useEffect(() => {
     const config = getConfig(apiKey);
-    console.log(config);
+    
     Axios.get(url, config)
       .then((res) => {
         var result = res.data.result;

@@ -1,46 +1,7 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 
-/*
-    colors:
-    #30A9DE
-    #EFDC05
-    #E53A40
-    #090707
-*/
-
-export default function Graph({datas, labels}) {
-    console.group("Graph");
-    console.log(datas);
-    console.log(labels);
-    console.groupEnd();
-
-    const data = {
-        datasets: [
-            {
-                backgroundColor: "#30A9DE",
-                data: datas.Fn1,
-                label: 'Fn1 Call'
-            },
-            {
-                backgroundColor: "#EFDC05",
-                data: datas.Fn2,
-                label: 'Fn2 Call'
-            },
-            {
-                backgroundColor: "#E53A40",
-                data: datas.Fn3,
-                label: 'Fn3 Call'
-            },
-            {
-                backgroundColor: "#090707",
-                data: datas.Price,
-                label: 'PRICE(원)'
-            }
-        ],
-        labels: labels
-    };
-
+export default function Graph({data}) {
     return <Bar
         data={data}
         options={options}
@@ -57,7 +18,7 @@ const options = {
     scales: {
         xAxes: [
             {
-                barThickness: 12,
+                barThickness: 6,
                 maxBarThickness: 10,
                 barPercentage: 0.5,
                 categoryPercentage: 0.5,

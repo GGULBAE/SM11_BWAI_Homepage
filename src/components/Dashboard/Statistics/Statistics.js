@@ -2,23 +2,29 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import StatisticsOptions from './StatisticsOptions.js';
+import Chart from './Chart.js';
 
 import getChartData from './getChartData.js';
-
+import convertChartData from './convertChartData.js';
 export default function Statistics({ apiKey }) {
-  const [setting, setSetting] = useState(1);
+  const [setting, setSetting] = useState(1); // Default: This Month
   const [data, setData] = useState(null);
-  
+  const [chartData, setChartData] = useState([]);
+
   useEffect(() => {
-    if (data) return;
-    
+    if (data)
+      convertChartData(data, setting, setChartData);
+    // eslint-disable-next-line
+  }, [data])
+
+  useEffect(() => {
     getChartData(apiKey, setting, setData);
-  }, [apiKey, setting, data])
+  }, [apiKey, setting]);
 
   return <StatisticsWrapper>
-    <StatisticsOptions setSetting={setSetting}/>
+    <StatisticsOptions setSetting={setSetting} />
     <ChartWrapper>
-      <Chart data={data}/>
+      <Chart data={chartData} />
     </ChartWrapper>
   </StatisticsWrapper>
 }
@@ -33,4 +39,4 @@ const StatisticsWrapper = styled.div`
 `
 
 const ChartWrapper = styled.div``;
-const Chart = styled.div``;
+// const Chart = styled.div``;

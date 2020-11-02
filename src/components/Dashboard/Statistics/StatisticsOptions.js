@@ -3,9 +3,9 @@ import Select from 'react-select'
 import styled from 'styled-components';
 
 const options = [
-  { value: 1, label: 'Recent' },
-  { value: 2, label: 'Monthly' },
-  { value: 3, label: 'Yearly' },
+  { value: 1, label: 'This Month' },
+  { value: 2, label: 'This Year' },
+  { value: 3, label: 'All Period' },
 ]
 
 export default function StatisticsOptions({ setSetting }) {
