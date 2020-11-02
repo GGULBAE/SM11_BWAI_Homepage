@@ -6,6 +6,7 @@ import Chart from './Chart.js';
 
 import getChartData from './getChartData.js';
 import convertChartData from './convertChartData.js';
+
 export default function Statistics({ apiKey }) {
   const [setting, setSetting] = useState(1); // Default: This Month
   const [data, setData] = useState(null);
@@ -32,10 +33,13 @@ export default function Statistics({ apiKey }) {
 const StatisticsWrapper = styled.div`
   margin: 24px;
   border-radius: 5px 5px;
-  boxShadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1);
   background-color: #FFF;
   overflow-x: scroll;
-  height: calc(100vh - 64px - 48px);
+  height: calc(300px + 71px + 24px + 24px);
+  
 `
 
-const ChartWrapper = styled.div``;
+const ChartWrapper = styled.div`
+  margin: 24px;
+`;
