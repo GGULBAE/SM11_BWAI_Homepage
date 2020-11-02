@@ -26,8 +26,8 @@ export default function UserInfo({ apiKey }) {
     <ImgWrapper>
       <Img src={require("../../../assets/Main_B.svg")} alt="" />
     </ImgWrapper>
-    <Name style={{ fontSize: "16px", margin: "0", lineHeight: "1.334", fontWeight: "bold" }}>{name} 님</Name>
-    <Level style={{ fontSize: "16px", margin: "0", lineHeight: "1.334", color: "gray" }}>정회원</Level>
+    <Name>{name} 님</Name>
+    <Level>정회원</Level>
   </ProfileWrapper>
 }
 
