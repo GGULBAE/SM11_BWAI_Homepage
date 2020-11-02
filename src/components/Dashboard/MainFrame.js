@@ -3,12 +3,11 @@ import styled from 'styled-components';
 
 import SideBar from './SideBar/SideBar.js';
 import Statistics from './Statistics/Statistics.js';
-// import Statistics from './Statistics.js';
 import Settings from './Settings.js';
 
-export default function MainFrame(apiKey) {
+export default function MainFrame({ apiKey }) {
     const [view, setView] = useState("Dashboard");
-
+    
     return <MainFrameWrapper>
         <SideBar setView={setView} apiKey={apiKey}/>
         {

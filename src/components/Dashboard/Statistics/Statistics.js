@@ -1,16 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import StatisticsOptions from './StatisticsOptions.js';
-// import Chart from './Chart.js';
+
+import getChartData from './getChartData.js';
 
 export default function Statistics({ apiKey }) {
   const [setting, setSetting] = useState(1);
-  console.log(setting);
+  const [data, setData] = useState(null);
+  
+  useEffect(() => {
+    if (data) return;
+    
+    getChartData(apiKey, setting, setData);
+  }, [apiKey, setting, data])
+
   return <StatisticsWrapper>
     <StatisticsOptions setSetting={setSetting}/>
     <ChartWrapper>
-      <Chart/>
+      <Chart data={data}/>
     </ChartWrapper>
   </StatisticsWrapper>
 }

@@ -6,13 +6,13 @@ import getConfig from '../getConfig.js';
 
 const apiServer = process.env.REACT_APP_API_SERVER;
 
-export default function UserInfo(apiKey) {
-  const config = getConfig(apiKey);
-
+export default function UserInfo({ apiKey }) {
   const url = `${apiServer}/api/auth/info`;
   const [name, setName] = useState("loading")
 
   useEffect(() => {
+    const config = getConfig(apiKey);
+    console.log(config);
     Axios.get(url, config)
       .then((res) => {
         var result = res.data.result;
@@ -20,11 +20,11 @@ export default function UserInfo(apiKey) {
 
         setName(user_id);
       })
-  })
+  }, [apiKey, url])
 
   return <ProfileWrapper>
     <ImgWrapper>
-      <Img src={require("../../../assets/Main_B.svg")} alt=""/>
+      <Img src={require("../../../assets/Main_B.svg")} alt="" />
     </ImgWrapper>
     <Name style={{ fontSize: "16px", margin: "0", lineHeight: "1.334", fontWeight: "bold" }}>{name} 님</Name>
     <Level style={{ fontSize: "16px", margin: "0", lineHeight: "1.334", color: "gray" }}>정회원</Level>

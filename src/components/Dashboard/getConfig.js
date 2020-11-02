@@ -1,3 +1,1 @@
-export default (myKey) => {
-  return { headers: { Authorization: `Bearer ${myKey}` } };
-}
+export default (myKey) => { return { headers: { Authorization: `Bearer ${myKey}` } }; }
