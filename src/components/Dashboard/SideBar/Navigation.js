@@ -18,5 +18,7 @@ export default function Navigation({ setView }) {
 }
 
 const NavigationBtns = styled.div`
-  padding: 8px;
+  padding: 24px 16px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 0.875rem
 `
