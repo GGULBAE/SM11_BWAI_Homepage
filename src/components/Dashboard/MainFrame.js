@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 import SideBar from './SideBar/SideBar.js';
 import Statistics from './Statistics/Statistics.js';
-import Settings from './Settings.js';
+import Account from './Account.js';
 
 export default function MainFrame({ apiKey }) {
-    const [view, setView] = useState("Dashboard");
+    const [view, setView] = useState("Account");
     
     return <MainFrameWrapper>
         <SideBar setView={setView} apiKey={apiKey}/>
@@ -14,7 +14,7 @@ export default function MainFrame({ apiKey }) {
             view === "Dashboard" ? <Statistics apiKey={apiKey}/> : null
         }
         {
-            view === "Settings" ? <Settings/> : null
+            view === "Account" ? <Account apiKey={apiKey}/> : null
         }
     </MainFrameWrapper>
 }

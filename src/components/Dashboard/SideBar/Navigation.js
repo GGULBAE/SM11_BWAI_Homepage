@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import NavigationBtn from './NavigationBtn.js';
 
 export default function Navigation({ setView }) {
-  const datas = ["Dashboard", "Settings", "Account", "Logout"];
+  const datas = ["Dashboard", "Account", "Logout"];
   const [highlight, setHighlight] = useState("Dashboard");
 
   function NavSetView(to) {
