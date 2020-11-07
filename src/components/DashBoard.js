@@ -26,7 +26,7 @@ export default function DashBoard() {
           var result = res.data.result;
           if (result) {
             window.sessionStorage.setItem("myAPIKey", result.user_token);
-            setMyKey(result);
+            setMyKey(result.user_token);
             window.location.reload();
           } else {
             alert("로그인 실패");

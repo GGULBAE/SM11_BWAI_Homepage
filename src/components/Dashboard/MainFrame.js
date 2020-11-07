@@ -6,7 +6,7 @@ import Statistics from './Statistics/Statistics.js';
 import Account from './Account.js';
 
 export default function MainFrame({ apiKey }) {
-    const [view, setView] = useState("Account");
+    const [view, setView] = useState("Dashboard");
     
     return <MainFrameWrapper>
         <SideBar setView={setView} apiKey={apiKey}/>
@@ -15,6 +15,9 @@ export default function MainFrame({ apiKey }) {
         }
         {
             view === "Account" ? <Account apiKey={apiKey}/> : null
+        }
+        {
+            view === "Logout" ? <Logout/> : null
         }
     </MainFrameWrapper>
 }
@@ -25,3 +28,12 @@ const MainFrameWrapper = styled.div`
     min-Height: calc(100vh - 64px);
     background-color: #F4F6F8
 `
+
+const Logout = () => {
+    window.sessionStorage.removeItem("myAPIKey");
+    window.location.href = "http://bwai.io/";
+
+    return <div>
+
+    </div>
+}

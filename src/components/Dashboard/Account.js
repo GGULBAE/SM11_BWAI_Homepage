@@ -3,21 +3,23 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import getConfig from './getConfig';
 
-export default function Account({apiKey}) {
+export default function Account({ apiKey }) {
   const [API_Token, setAPI_Token] = useState("");
 
   useEffect(() => {
-    const url = `${process.env.REACT_APP_API_SERVER}/api/auth/api_token`;
-    const config = getConfig(apiKey);
+    if (apiKey) {
+      const url = `${process.env.REACT_APP_API_SERVER}/api/auth/api_token`;
+      const config = getConfig(apiKey);
 
-    Axios.get(url, config)
-    .then((res) => {
-      console.log(res);
+      Axios.get(url, config)
+        .then((res) => {
+          console.log(res);
 
-      var result = res.data.result.api_token;
-      
-      setAPI_Token(result);
-    })
+          var result = res.data.result.api_token;
+
+          setAPI_Token(result);
+        })
+    }
   }, [apiKey])
   return <AccountWrapper>
     <TitleWrapper>
@@ -31,8 +33,8 @@ export default function Account({apiKey}) {
         {apiKey}
       </Token>
       <Contents>
-        ● 유저 토큰은 계정의 고유한 토큰입니다.<br/>
-        ● BWAI API Token을 얻기 위한 초기화 작업에서 필요한 토큰이며, 재발급이 불가합니다.<br/>
+        ● 유저 토큰은 계정의 고유한 토큰입니다.<br />
+        ● BWAI API Token을 얻기 위한 초기화 작업에서 필요한 토큰이며, 재발급이 불가합니다.<br />
       </Contents>
       <ContentsTitle className="margin">
         BWAI API Token
@@ -41,9 +43,9 @@ export default function Account({apiKey}) {
         {API_Token}
       </Token>
       <Contents>
-        ● BWAI 토큰은 API 이용을 위해 필요한 토큰입니다.<br/>
-        ● BWAI API를 이용하기 위해선 해당 토큰이 패킷 헤더에 필수적으로 포함되어야 합니다.<br/>
-        ● 해당 API 이용 내역은 Dashboard에서 확인할 수 있습니다.<br/>
+        ● BWAI 토큰은 API 이용을 위해 필요한 토큰입니다.<br />
+        ● BWAI API를 이용하기 위해선 해당 토큰이 패킷 헤더에 필수적으로 포함되어야 합니다.<br />
+        ● 해당 API 이용 내역은 Dashboard에서 확인할 수 있습니다.<br />
         ● 해당 토큰은 한시간 이내에 사용이 없으면 자동 만료 됩니다.
       </Contents>
     </ContentsWrapper>
