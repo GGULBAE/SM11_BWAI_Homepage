@@ -4,12 +4,12 @@ import styled from 'styled-components';
 const getRate = (prev, current) => {
   const rate = current / prev;
   
-  return rate;
+  return Math.round(rate * 100)/100;
 }
 
-export default function TodayUsages({ apiKey, type, prev, current }) {
+export default function TodayUsages({type, prev, current }) {
   const rate = getRate(prev, current);
-
+  console.log(rate);
   return <TodayUsagesWrapper>
     <TitleWrapper>
       <Title>

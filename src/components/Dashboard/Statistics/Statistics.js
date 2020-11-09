@@ -31,14 +31,29 @@ export default function Statistics({ apiKey }) {
 
   useEffect(() => {
     async function getPrevTodayData(apiKey) {
-      var Prev = await getPrevData(apiKey);
-      var Today = await getTodayData(apiKey);
+      const Prev = await getPrevData(apiKey);
+      const Today = await getTodayData(apiKey);
 
-      console.group("USEFFECT");
-      console.log(Prev);
-      console.log(Today);
-      console.groupEnd();
-      console.log(setUsages);
+      const result = {
+        Judge: {
+          prev: Prev.judge,
+          today: Today.judge
+        },
+        Masking: {
+          prev: Prev.masking,
+          today: Today.masking
+        },
+        Probability: {
+          prev: Prev.probability,
+          today: Today.probability
+        },
+        Price: {
+          prev: Prev.day_fee,
+          today: Today.day_fee
+        }
+      }
+
+      setUsages(result);
     }
 
     getPrevTodayData(apiKey);
@@ -90,18 +105,26 @@ const getYesterDayDate = () => {
 
 const apiServer = process.env.REACT_APP_API_SERVER;
 
-const getPrevData = (apiKey) => {
+async function getPrevData(apiKey) {
   const date = getYesterDayDate();
   const url = `${apiServer}/api/bwai/v1/dashboard/year/${date.year}/month/${date.month}/day/${date.date}`;
   const config = getConfig(apiKey);
+  const res = await Axios.get(url, config)
+  const result = res.data.result;
 
-  return Axios.get(url, config)
+  const prevData = result[date.year][date.month][date.date];
+  
+  return prevData;
 }
 
-const getTodayData = (apiKey) => {
+async function getTodayData(apiKey) {
   const date = getNowDate();
   const url = `${apiServer}/api/bwai/v1/dashboard/year/${date.year}/month/${date.month}/day/${date.date}`;
   const config = getConfig(apiKey);
+  const res = await Axios.get(url, config)
+  const result = res.data.result;
 
-  return Axios.get(url, config)
+  const todayData = result[date.year][date.month][date.date];
+  
+  return todayData;
 }
