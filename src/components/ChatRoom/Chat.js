@@ -34,8 +34,13 @@ function SystemChat({ text, scrollToBottom, possibility }) {
   const makeInnerHTML = (result) => {
     var contain_bad_words = result.probability.bad >= thread_hold;
     var sign_bad_words = contain_bad_words ? "있" : "없";
-
-    var string = `<p class="SystemChatTitle">BWAI API의 결과 <문장에는 욕이 ${sign_bad_words}습니다></p>`;
+    var circle_bad_words = contain_bad_words ? " 🔴": " 🔵";
+    
+    var string = `<p class="SystemChatTitle">`;
+    string += `${circle_bad_words} BWAI API의 결과<br/>`;
+    string += `${circle_bad_words} 문장에는 욕이 ${sign_bad_words}습니다!`;
+    // string += ``
+    string += `</p>`
 
     if (contain_bad_words && possibility) {
       var prob_per_token = result.prob_per_token;
@@ -50,7 +55,9 @@ function SystemChat({ text, scrollToBottom, possibility }) {
   const parseTokens = (prob_per_token, tokens) => {
     tokens = tokens.map((data) => data.replace("##", ""));
 
-    var string = "<p class='SystemChatContents'>";
+    var string = `<p class='SystemChatContents'>`;
+    string += `${" 🔴 "}`;
+
     var last_index = 0;
     var word_thread_hold = 1 / tokens.length;
     
