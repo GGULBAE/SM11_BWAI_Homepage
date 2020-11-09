@@ -5,7 +5,7 @@ const monthAlphabet = [
   "Sep", "Oct", "Nov", "Dec"
 ];
 const monthlyLabels = () => Array.from(Array(12), (e, i) => monthAlphabet[i]);
-const yearlyLabels = () => [2020];
+const yearlyLabels = () => [2018, 2019, 2020];
 
 const getLabels = (setting) => {
   var result;

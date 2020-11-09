@@ -27,7 +27,7 @@ const getSettedURL = (setting) => {
   } else if (setting === 2) { // This Year
     url = `${apiServer}/api/bwai/v1/dashboard/year/${year}/month/01`;
   } else if (setting === 3) { // All Period
-    url = `${apiServer}/api/bwai/v1/dashboard/year/2020`;
+    url = `${apiServer}/api/bwai/v1/dashboard/year/2018`;
   }
 
   return url;
