@@ -38,9 +38,9 @@ function SystemChat({ text, scrollToBottom, possibility }) {
     
     var string = `<p class="SystemChatTitle">`;
     string += `BWAI API의 결과<br/>`;
-    string += `문장에는 욕이 ${sign_bad_words}습니다! ${circle_bad_words}`;
-    // string += ``
-    string += `</p>`
+    string += `문장에는 욕이 ${sign_bad_words}습니다!`;
+    string += `${circle_bad_words}`;
+    string += `</p>`;
 
     if (contain_bad_words && possibility) {
       var prob_per_token = result.prob_per_token;
@@ -56,7 +56,6 @@ function SystemChat({ text, scrollToBottom, possibility }) {
     tokens = tokens.map((data) => data.replace("##", ""));
 
     var string = `<p class='SystemChatContents'>`;
-    // string += `${" 🔴 "}`;
 
     var last_index = 0;
     var word_thread_hold = 1 / tokens.length;
