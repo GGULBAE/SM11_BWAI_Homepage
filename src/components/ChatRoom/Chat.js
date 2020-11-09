@@ -37,8 +37,8 @@ function SystemChat({ text, scrollToBottom, possibility }) {
     var circle_bad_words = contain_bad_words ? " 🔴": " 🔵";
     
     var string = `<p class="SystemChatTitle">`;
-    string += `${circle_bad_words} BWAI API의 결과<br/>`;
-    string += `${circle_bad_words} 문장에는 욕이 ${sign_bad_words}습니다!`;
+    string += `BWAI API의 결과<br/>`;
+    string += `문장에는 욕이 ${sign_bad_words}습니다! ${circle_bad_words}`;
     // string += ``
     string += `</p>`
 
@@ -56,7 +56,7 @@ function SystemChat({ text, scrollToBottom, possibility }) {
     tokens = tokens.map((data) => data.replace("##", ""));
 
     var string = `<p class='SystemChatContents'>`;
-    string += `${" 🔴 "}`;
+    // string += `${" 🔴 "}`;
 
     var last_index = 0;
     var word_thread_hold = 1 / tokens.length;
