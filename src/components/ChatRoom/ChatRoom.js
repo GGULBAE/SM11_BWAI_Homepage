@@ -4,11 +4,14 @@ import styled from 'styled-components';
 import ChatMessage from './ChatMessage.js';
 
 const defaultText = "텍스트를 입력하세요."
+const defaultSystemText = "욕설을 입력해주세요!";
+
+const defaultSystemMessage = { direction: "left", text: defaultSystemText};
 
 export default function ChatRoom() {
   const [inputText, setInputText] = useState(defaultText);
   const [changed, setChanged] = useState(false);
-  const [prevTexts, setPrevTexts] = useState([]);
+  const [prevTexts, setPrevTexts] = useState([defaultSystemMessage]);
   const [mode, setMode] = useState(false); // Possibility - true: Get Possibility, flase: No Possibility
 
   const ref_chatWrapper = useRef(null);
@@ -23,7 +26,7 @@ export default function ChatRoom() {
   return <ChatRoomWrapper>
     <ChatMessagesWrapper ref={ref_chatWrapper}>
       {
-      prevTexts.map((data, index) => <ChatMessage key={index}data={data} scrollToBottom={scrollToBottom}/>)
+      prevTexts.map((data, index) => <ChatMessage key={index}data={data} scrollToBottom={scrollToBottom} noChange={index === 0}/>)
       }
     </ChatMessagesWrapper>
     <ChatInputWrapper>

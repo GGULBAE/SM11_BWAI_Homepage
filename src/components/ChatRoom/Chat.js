@@ -6,7 +6,7 @@ const apiServer = process.env.REACT_APP_API_SERVER;
 const default_Loading = "Loading...";
 const thread_hold = 0.8; // bad words contains or not
 
-function SystemChat({ text, scrollToBottom, possibility }) {
+function SystemChat({ text, scrollToBottom, possibility, noChange }) {
   const [transForm, setTransForm] = useState({ __html: default_Loading });
 
   // ComponentDidMount
@@ -22,7 +22,12 @@ function SystemChat({ text, scrollToBottom, possibility }) {
       .then((res) => {
         var string = makeInnerHTML(res.data.result);
         console.log(string);
+        if (noChange) {
+          string = `<p class='SystemChatContents'>${text}</p>`;
+        }
+        
         setTransForm({ __html: string });
+        
       })
   })
 
