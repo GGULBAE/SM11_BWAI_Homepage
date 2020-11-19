@@ -58,6 +58,7 @@ function SystemChat({ text, scrollToBottom, possibility, noChange }) {
 
       Axios.post(url, data)
         .then((res) => {
+          console.log(res);
           var string = makeInnerHTML(res.data.result);
           console.log(string);
           if (noChange) {
@@ -102,20 +103,14 @@ function SystemChat({ text, scrollToBottom, possibility, noChange }) {
 
     var string = `<p class='SystemChatContents'>`;
 
-    var last_index = 0;
     var word_thread_hold = 1 / tokens.length;
 
     for (var i = 0; i < tokens.length; i++) {
-      var index = text.indexOf(tokens[i]);
-
-      string += text.slice(last_index, index);
       if (prob_per_token[i] >= word_thread_hold) {
-        string += `<span class="highlight">${tokens[i]}</span>`
+        string += `<span class="highlight">${tokens[i] + " "}</span>`
       } else {
-        string += tokens[i];
+        string += tokens[i] + " ";
       }
-
-      last_index = index + tokens[i].length;
     }
 
     string += "</p>"
