@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const apiServer = process.env.REACT_APP_API_SERVER;
 const default_Loading = "Loading...";
-// const thread_hold = 0.8; // bad words contains or not
+const thread_hold = 0.8; // bad words contains or not
 
 function SystemChat({ text, scrollToBottom, possibility, noChange }) {
   const [transForm, setTransForm] = useState({ __html: default_Loading });
@@ -13,53 +13,62 @@ function SystemChat({ text, scrollToBottom, possibility, noChange }) {
   useEffect(() => {
     if (isLoadEnded()) return;
 
-    var url = `${apiServer}/api/bwai/v1/judge/demo`;
-    var data = {
-      'text': text
+    console.log(text, possibility);
+
+    var url;
+    var data;
+    if (possibility === false) {
+      console.log("JUDGE");
+      url = `${apiServer}/api/bwai/v1/judge/demo`;
+      data = {
+        'text': text
+      }
+
+      Axios.post(url, data)
+        .then((res) => {
+          console.log(res);
+          const Judge = res.data.result.judge;
+          var string;
+
+          string = `<p class="SystemChatTitle">`;
+          string += `BWAI API의 결과<br/>`;
+
+          if (Judge) {
+            string += `문장에는 욕이 있습니다! 🔴`;
+          } else {
+            string += `문장에는 욕이 없습니다! 🔵`;
+          }
+          string += `</p>`;
+
+          // if (Judge) {
+
+          // }
+          // // if (res.data.result.judge)
+          if (noChange) {
+            string = `<p class='SystemChatContents'>${text}</p>`;
+          }
+          setTransForm({ __html: string });
+        })
+    } else {
+      console.log("Probability");
+      url = `${apiServer}/api/bwai/v1/probability/demo`;
+      data = {
+        'text': text
+      }
+
+      Axios.post(url, data)
+        .then((res) => {
+          var string = makeInnerHTML(res.data.result);
+          console.log(string);
+          if (noChange) {
+            string = `<p class='SystemChatContents'>${text}</p>`;
+          }
+
+          setTransForm({ __html: string });
+
+        })
     }
 
-    var string;
-
-    Axios.post(url, data)
-      .then((res) => {
-        console.log(res);
-        const Judge = res.data.result.judge;
-      
-        string = `<p class="SystemChatTitle">`;
-        string += `BWAI API의 결과<br/>`;
-        
-        if (Judge) {  
-          string += `문장에는 욕이 있습니다! 🔴`;
-        } else {
-          string += `문장에는 욕이 없습니다! 🔵`;
-        }
-        string += `</p>`;
-        
-        // if (Judge) {
-
-        // }
-        // // if (res.data.result.judge)
-        if (noChange) {
-          string = `<p class='SystemChatContents'>${text}</p>`;
-        }
-        setTransForm({ __html: string });
-      })
-    // var url = `${apiServer}/api/bwai/v1/probability/demo`;
-    // var data = {
-    //   'text': text
-    // }
-
-    // Axios.post(url, data)
-    //   .then((res) => {
-    //     var string = makeInnerHTML(res.data.result);
-    //     console.log(string);
-    //     if (noChange) {
-    //       string = `<p class='SystemChatContents'>${text}</p>`;
-    //     }
-
-    //     setTransForm({ __html: string });
-
-    //   })
   })
 
   useEffect(() => {
@@ -67,52 +76,52 @@ function SystemChat({ text, scrollToBottom, possibility, noChange }) {
   }, [transForm, scrollToBottom])
 
   const isLoadEnded = () => transForm.__html !== default_Loading;
-  // const makeInnerHTML = (result) => {
-  //   var contain_bad_words = result.probability.bad >= thread_hold;
-  //   var sign_bad_words = contain_bad_words ? "있" : "없";
-  //   var circle_bad_words = contain_bad_words ? " 🔴" : " 🔵";
+  const makeInnerHTML = (result) => {
+    var contain_bad_words = result.probability.bad >= thread_hold;
+    var sign_bad_words = contain_bad_words ? "있" : "없";
+    var circle_bad_words = contain_bad_words ? " 🔴" : " 🔵";
 
-  //   var string = `<p class="SystemChatTitle">`;
-  //   string += `BWAI API의 결과<br/>`;
-  //   string += `문장에는 욕이 ${sign_bad_words}습니다!`;
-  //   string += `${circle_bad_words}`;
-  //   string += `</p>`;
+    var string = `<p class="SystemChatTitle">`;
+    string += `BWAI API의 결과<br/>`;
+    string += `문장에는 욕이 ${sign_bad_words}습니다!`;
+    string += `${circle_bad_words}`;
+    string += `</p>`;
 
-  //   if (contain_bad_words && possibility) {
-  //     var prob_per_token = result.prob_per_token;
-  //     var tokens = result.tokens;
+    if (contain_bad_words && possibility) {
+      var prob_per_token = result.prob_per_token;
+      var tokens = result.tokens;
 
-  //     string += parseTokens(prob_per_token, tokens);
-  //   }
+      string += parseTokens(prob_per_token, tokens);
+    }
 
-  //   return string;
-  // }
+    return string;
+  }
 
-  // const parseTokens = (prob_per_token, tokens) => {
-  //   tokens = tokens.map((data) => data.replace("##", ""));
+  const parseTokens = (prob_per_token, tokens) => {
+    tokens = tokens.map((data) => data.replace("##", ""));
 
-  //   var string = `<p class='SystemChatContents'>`;
+    var string = `<p class='SystemChatContents'>`;
 
-  //   var last_index = 0;
-  //   var word_thread_hold = 1 / tokens.length;
+    var last_index = 0;
+    var word_thread_hold = 1 / tokens.length;
 
-  //   for (var i = 0; i < tokens.length; i++) {
-  //     var index = text.indexOf(tokens[i]);
+    for (var i = 0; i < tokens.length; i++) {
+      var index = text.indexOf(tokens[i]);
 
-  //     string += text.slice(last_index, index);
-  //     if (prob_per_token[i] >= word_thread_hold) {
-  //       string += `<span class="highlight">${tokens[i]}</span>`
-  //     } else {
-  //       string += tokens[i];
-  //     }
+      string += text.slice(last_index, index);
+      if (prob_per_token[i] >= word_thread_hold) {
+        string += `<span class="highlight">${tokens[i]}</span>`
+      } else {
+        string += tokens[i];
+      }
 
-  //     last_index = index + tokens[i].length;
-  //   }
+      last_index = index + tokens[i].length;
+    }
 
-  //   string += "</p>"
+    string += "</p>"
 
-  //   return string;
-  // }
+    return string;
+  }
 
   return <React.Fragment>
     <SystemInfo>
